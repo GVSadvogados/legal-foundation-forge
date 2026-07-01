@@ -9,38 +9,191 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VideosRouteImport } from './routes/videos'
+import { Route as QuemSomosRouteImport } from './routes/quem-somos'
+import { Route as DepoimentosRouteImport } from './routes/depoimentos'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as AreasDeAtuacaoRouteImport } from './routes/areas-de-atuacao'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AreasDeAtuacaoIndexRouteImport } from './routes/areas-de-atuacao.index'
+import { Route as AreasDeAtuacaoDireitoDoTrabalhoRouteImport } from './routes/areas-de-atuacao.direito-do-trabalho'
+import { Route as AreasDeAtuacaoDireitoDoConsumidorRouteImport } from './routes/areas-de-atuacao.direito-do-consumidor'
+import { Route as AreasDeAtuacaoDireitoCivilEFamiliaRouteImport } from './routes/areas-de-atuacao.direito-civil-e-familia'
 
+const VideosRoute = VideosRouteImport.update({
+  id: '/videos',
+  path: '/videos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuemSomosRoute = QuemSomosRouteImport.update({
+  id: '/quem-somos',
+  path: '/quem-somos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DepoimentosRoute = DepoimentosRouteImport.update({
+  id: '/depoimentos',
+  path: '/depoimentos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AreasDeAtuacaoRoute = AreasDeAtuacaoRouteImport.update({
+  id: '/areas-de-atuacao',
+  path: '/areas-de-atuacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AreasDeAtuacaoIndexRoute = AreasDeAtuacaoIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AreasDeAtuacaoRoute,
+} as any)
+const AreasDeAtuacaoDireitoDoTrabalhoRoute =
+  AreasDeAtuacaoDireitoDoTrabalhoRouteImport.update({
+    id: '/direito-do-trabalho',
+    path: '/direito-do-trabalho',
+    getParentRoute: () => AreasDeAtuacaoRoute,
+  } as any)
+const AreasDeAtuacaoDireitoDoConsumidorRoute =
+  AreasDeAtuacaoDireitoDoConsumidorRouteImport.update({
+    id: '/direito-do-consumidor',
+    path: '/direito-do-consumidor',
+    getParentRoute: () => AreasDeAtuacaoRoute,
+  } as any)
+const AreasDeAtuacaoDireitoCivilEFamiliaRoute =
+  AreasDeAtuacaoDireitoCivilEFamiliaRouteImport.update({
+    id: '/direito-civil-e-familia',
+    path: '/direito-civil-e-familia',
+    getParentRoute: () => AreasDeAtuacaoRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/areas-de-atuacao': typeof AreasDeAtuacaoRouteWithChildren
+  '/contato': typeof ContatoRoute
+  '/depoimentos': typeof DepoimentosRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/videos': typeof VideosRoute
+  '/areas-de-atuacao/direito-civil-e-familia': typeof AreasDeAtuacaoDireitoCivilEFamiliaRoute
+  '/areas-de-atuacao/direito-do-consumidor': typeof AreasDeAtuacaoDireitoDoConsumidorRoute
+  '/areas-de-atuacao/direito-do-trabalho': typeof AreasDeAtuacaoDireitoDoTrabalhoRoute
+  '/areas-de-atuacao/': typeof AreasDeAtuacaoIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/depoimentos': typeof DepoimentosRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/videos': typeof VideosRoute
+  '/areas-de-atuacao/direito-civil-e-familia': typeof AreasDeAtuacaoDireitoCivilEFamiliaRoute
+  '/areas-de-atuacao/direito-do-consumidor': typeof AreasDeAtuacaoDireitoDoConsumidorRoute
+  '/areas-de-atuacao/direito-do-trabalho': typeof AreasDeAtuacaoDireitoDoTrabalhoRoute
+  '/areas-de-atuacao': typeof AreasDeAtuacaoIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/areas-de-atuacao': typeof AreasDeAtuacaoRouteWithChildren
+  '/contato': typeof ContatoRoute
+  '/depoimentos': typeof DepoimentosRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/videos': typeof VideosRoute
+  '/areas-de-atuacao/direito-civil-e-familia': typeof AreasDeAtuacaoDireitoCivilEFamiliaRoute
+  '/areas-de-atuacao/direito-do-consumidor': typeof AreasDeAtuacaoDireitoDoConsumidorRoute
+  '/areas-de-atuacao/direito-do-trabalho': typeof AreasDeAtuacaoDireitoDoTrabalhoRoute
+  '/areas-de-atuacao/': typeof AreasDeAtuacaoIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/areas-de-atuacao'
+    | '/contato'
+    | '/depoimentos'
+    | '/quem-somos'
+    | '/videos'
+    | '/areas-de-atuacao/direito-civil-e-familia'
+    | '/areas-de-atuacao/direito-do-consumidor'
+    | '/areas-de-atuacao/direito-do-trabalho'
+    | '/areas-de-atuacao/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contato'
+    | '/depoimentos'
+    | '/quem-somos'
+    | '/videos'
+    | '/areas-de-atuacao/direito-civil-e-familia'
+    | '/areas-de-atuacao/direito-do-consumidor'
+    | '/areas-de-atuacao/direito-do-trabalho'
+    | '/areas-de-atuacao'
+  id:
+    | '__root__'
+    | '/'
+    | '/areas-de-atuacao'
+    | '/contato'
+    | '/depoimentos'
+    | '/quem-somos'
+    | '/videos'
+    | '/areas-de-atuacao/direito-civil-e-familia'
+    | '/areas-de-atuacao/direito-do-consumidor'
+    | '/areas-de-atuacao/direito-do-trabalho'
+    | '/areas-de-atuacao/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AreasDeAtuacaoRoute: typeof AreasDeAtuacaoRouteWithChildren
+  ContatoRoute: typeof ContatoRoute
+  DepoimentosRoute: typeof DepoimentosRoute
+  QuemSomosRoute: typeof QuemSomosRoute
+  VideosRoute: typeof VideosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/videos': {
+      id: '/videos'
+      path: '/videos'
+      fullPath: '/videos'
+      preLoaderRoute: typeof VideosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quem-somos': {
+      id: '/quem-somos'
+      path: '/quem-somos'
+      fullPath: '/quem-somos'
+      preLoaderRoute: typeof QuemSomosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/depoimentos': {
+      id: '/depoimentos'
+      path: '/depoimentos'
+      fullPath: '/depoimentos'
+      preLoaderRoute: typeof DepoimentosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/areas-de-atuacao': {
+      id: '/areas-de-atuacao'
+      path: '/areas-de-atuacao'
+      fullPath: '/areas-de-atuacao'
+      preLoaderRoute: typeof AreasDeAtuacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +201,64 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/areas-de-atuacao/': {
+      id: '/areas-de-atuacao/'
+      path: '/'
+      fullPath: '/areas-de-atuacao/'
+      preLoaderRoute: typeof AreasDeAtuacaoIndexRouteImport
+      parentRoute: typeof AreasDeAtuacaoRoute
+    }
+    '/areas-de-atuacao/direito-do-trabalho': {
+      id: '/areas-de-atuacao/direito-do-trabalho'
+      path: '/direito-do-trabalho'
+      fullPath: '/areas-de-atuacao/direito-do-trabalho'
+      preLoaderRoute: typeof AreasDeAtuacaoDireitoDoTrabalhoRouteImport
+      parentRoute: typeof AreasDeAtuacaoRoute
+    }
+    '/areas-de-atuacao/direito-do-consumidor': {
+      id: '/areas-de-atuacao/direito-do-consumidor'
+      path: '/direito-do-consumidor'
+      fullPath: '/areas-de-atuacao/direito-do-consumidor'
+      preLoaderRoute: typeof AreasDeAtuacaoDireitoDoConsumidorRouteImport
+      parentRoute: typeof AreasDeAtuacaoRoute
+    }
+    '/areas-de-atuacao/direito-civil-e-familia': {
+      id: '/areas-de-atuacao/direito-civil-e-familia'
+      path: '/direito-civil-e-familia'
+      fullPath: '/areas-de-atuacao/direito-civil-e-familia'
+      preLoaderRoute: typeof AreasDeAtuacaoDireitoCivilEFamiliaRouteImport
+      parentRoute: typeof AreasDeAtuacaoRoute
+    }
   }
 }
 
+interface AreasDeAtuacaoRouteChildren {
+  AreasDeAtuacaoDireitoCivilEFamiliaRoute: typeof AreasDeAtuacaoDireitoCivilEFamiliaRoute
+  AreasDeAtuacaoDireitoDoConsumidorRoute: typeof AreasDeAtuacaoDireitoDoConsumidorRoute
+  AreasDeAtuacaoDireitoDoTrabalhoRoute: typeof AreasDeAtuacaoDireitoDoTrabalhoRoute
+  AreasDeAtuacaoIndexRoute: typeof AreasDeAtuacaoIndexRoute
+}
+
+const AreasDeAtuacaoRouteChildren: AreasDeAtuacaoRouteChildren = {
+  AreasDeAtuacaoDireitoCivilEFamiliaRoute:
+    AreasDeAtuacaoDireitoCivilEFamiliaRoute,
+  AreasDeAtuacaoDireitoDoConsumidorRoute:
+    AreasDeAtuacaoDireitoDoConsumidorRoute,
+  AreasDeAtuacaoDireitoDoTrabalhoRoute: AreasDeAtuacaoDireitoDoTrabalhoRoute,
+  AreasDeAtuacaoIndexRoute: AreasDeAtuacaoIndexRoute,
+}
+
+const AreasDeAtuacaoRouteWithChildren = AreasDeAtuacaoRoute._addFileChildren(
+  AreasDeAtuacaoRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AreasDeAtuacaoRoute: AreasDeAtuacaoRouteWithChildren,
+  ContatoRoute: ContatoRoute,
+  DepoimentosRoute: DepoimentosRoute,
+  QuemSomosRoute: QuemSomosRoute,
+  VideosRoute: VideosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
