@@ -23,10 +23,10 @@ export function CTASection({ eyebrow = "Fale com o escritório", title, descript
             Agendar conversa
             <ArrowRight size={16} />
           </Link>
-          <a href="https://wa.me/5500000000000" target="_blank" rel="noreferrer" className="button button--ghost">
+          <Link to="/contato" className="button button--ghost">
             <MessageCircle size={16} />
-            WhatsApp
-          </a>
+            Ver contato
+          </Link>
         </div>
       </div>
     </section>

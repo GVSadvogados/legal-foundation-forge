@@ -15,8 +15,6 @@ type Props = {
 export function PageHero({ eyebrow, title, description, breadcrumbs, primaryAction, secondaryAction }: Props) {
   return (
     <section className="section section--dark hero">
-      <div className="animated-blob blob-1" />
-      <div className="animated-blob blob-2" />
       <div className="container-page hero-grid hero-grid--two">
         <div>
           {breadcrumbs ? (
@@ -24,7 +22,11 @@ export function PageHero({ eyebrow, title, description, breadcrumbs, primaryActi
               {breadcrumbs.map((crumb, index) => (
                 <span key={`${crumb.label}-${index}`} style={{ display: "inline-flex", gap: 10, alignItems: "center" }}>
                   {index > 0 ? <ChevronRight size={12} /> : null}
-                  {crumb.to ? <Link to={crumb.to}>{crumb.label}</Link> : <span style={{ color: "rgba(255,255,255,.82)" }}>{crumb.label}</span>}
+                  {crumb.to ? (
+                    <Link to={crumb.to}>{crumb.label}</Link>
+                  ) : (
+                    <span style={{ color: "rgba(255,255,255,.82)" }}>{crumb.label}</span>
+                  )}
                 </span>
               ))}
             </nav>
@@ -68,9 +70,9 @@ export function PageHero({ eyebrow, title, description, breadcrumbs, primaryActi
                 </p>
               </div>
               <div className="hero-card">
-                <h3 className="hero-card-title">Animações discretas</h3>
+                <h3 className="hero-card-title">Microinterações discretas</h3>
                 <p className="hero-card-copy">
-                  Revelação por scroll, hover refinado e microinterações suaves sem exagero visual.
+                  Revelação por scroll, hover refinado e transições suaves sem excesso de ruído visual.
                 </p>
               </div>
               <div className="hero-metrics">

@@ -11,6 +11,7 @@ export function TestimonialsPage() {
   usePageMeta({
     title: "Depoimentos — GVS Advogados Associados",
     description: "Depoimentos de clientes atendidos pelo escritório GVS Advogados Associados.",
+    path: "/depoimentos",
   });
 
   return (

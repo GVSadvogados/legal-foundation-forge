@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import type { LucideIcon } from "lucide-react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, type LucideIcon } from "lucide-react";
 
 type Props = {
   icon: LucideIcon;
@@ -17,7 +16,9 @@ export function AreaCard({ icon: Icon, title, description, to, number }: Props) 
         <div className="card-icon">
           <Icon size={24} strokeWidth={1.5} />
         </div>
-        {number ? <div style={{ fontFamily: "Cormorant Garamond, Georgia, serif", fontSize: "2.4rem", color: "rgba(13,13,13,.18)", lineHeight: 1 }}>{number}</div> : null}
+        {number ? (
+          <div className="card-number">{number}</div>
+        ) : null}
       </div>
       <h3 className="card-title">{title}</h3>
       <p className="card-copy">{description}</p>

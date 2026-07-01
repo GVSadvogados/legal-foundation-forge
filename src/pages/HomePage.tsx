@@ -6,7 +6,7 @@ import { AreaCard } from "@/components/site/AreaCard";
 import { TestimonialCard } from "@/components/site/TestimonialCard";
 import { CTASection } from "@/components/site/CTASection";
 import { Reveal } from "@/components/site/Reveal";
-import { differentiators, homeAreas, testimonials } from "@/data";
+import { differentiators, homeAreas, testimonials, trustSignals } from "@/data";
 import { usePageMeta } from "./PageMeta";
 
 export function HomePage() {
@@ -14,22 +14,27 @@ export function HomePage() {
     title: "GVS Advogados Associados — Advocacia institucional premium",
     description:
       "Site institucional de advocacia com visual sóbrio, navegação clara, animações discretas e estrutura profissional.",
+    path: "/",
   });
 
   return (
     <SiteLayout>
       <section className="section section--dark hero">
-        <div className="animated-blob blob-1" />
-        <div className="animated-blob blob-2" />
         <div className="container-page hero-grid hero-grid--two">
           <Reveal>
             <div className="eyebrow">GVS Advogados Associados</div>
-            <h1 className="hero-title">
-              Advocacia com presença elegante e leitura imediata.
-            </h1>
+            <h1 className="hero-title">Advocacia com presença elegante e leitura imediata.</h1>
             <p className="lede">
-              Estrutura institucional pensada para parecer mais refinada, com navegação objetiva, textos claros e animações suaves que reforçam confiança.
+              Estrutura institucional pensada para transmitir sobriedade, confiança e direção
+              clara desde o primeiro contato, com navegação objetiva e animações discretas.
             </p>
+            <div className="trust-row">
+              {trustSignals.map((item) => (
+                <span key={item} className="trust-pill">
+                  {item}
+                </span>
+              ))}
+            </div>
             <div className="hero-actions">
               <Link to="/contato" className="button button--primary">
                 Agendar conversa
@@ -51,19 +56,22 @@ export function HomePage() {
                     </p>
                     <h3 className="hero-card-title">Mais organização, menos ruído.</h3>
                     <p className="hero-card-copy">
-                      O layout agora distribui melhor os blocos, melhora a leitura e cria um percurso mais agradável entre as páginas.
+                      O layout foi reorganizado para equilibrar hierarquia, respiro e fluidez entre as
+                      seções, com leitura mais segura no desktop e no mobile.
                     </p>
                   </div>
                   <div className="hero-card">
                     <h3 className="hero-card-title">Animações sutis</h3>
                     <p className="hero-card-copy">
-                      Revelações por scroll, pequenos movimentos nos cards e hover refinado elevam a percepção do site sem exagero.
+                      Revelações por scroll, pequenos movimentos nos cards e hover refinado elevam a
+                      percepção do site sem exagero visual.
                     </p>
                   </div>
                   <div className="hero-card">
                     <h3 className="hero-card-title">Tom jurídico premium</h3>
                     <p className="hero-card-copy">
-                      A linguagem visual ficou mais sóbria, com contraste, respiro e uma paleta que conversa melhor com o universo da advocacia.
+                      A linguagem visual ficou mais sóbria, com contraste, respiro e uma paleta que
+                      conversa melhor com o universo da advocacia.
                     </p>
                   </div>
                   <div className="hero-metrics">
@@ -95,11 +103,13 @@ export function HomePage() {
           <Reveal>
             <div className="card card--soft">
               <p className="section-text lede--dark" style={{ margin: 0 }}>
-                Breve texto placeholder sobre o escritório, sua postura profissional e a forma como lida com cada caso. A ideia aqui é transmitir confiança sem ficar pesado.
+                Texto institucional placeholder sobre o escritório, sua postura profissional e a forma
+                como lida com cada caso. A ideia aqui é transmitir confiança sem ficar pesado.
               </p>
               <div className="subtle-rule" style={{ margin: "22px 0" }} />
               <p className="section-text lede--dark" style={{ margin: 0 }}>
-                Segundo trecho placeholder reforçando atendimento humanizado, clareza na comunicação e atuação técnica.
+                Segundo trecho placeholder reforçando atendimento humanizado, clareza na comunicação e
+                atuação técnica.
               </p>
             </div>
           </Reveal>
@@ -137,7 +147,9 @@ export function HomePage() {
                   <div className="card-icon">
                     <item.icon size={24} strokeWidth={1.5} />
                   </div>
-                  <h3 className="card-title" style={{ fontSize: "1.8rem" }}>{item.title}</h3>
+                  <h3 className="card-title" style={{ fontSize: "1.8rem" }}>
+                    {item.title}
+                  </h3>
                   <p className="card-copy">{item.description}</p>
                 </div>
               </Reveal>

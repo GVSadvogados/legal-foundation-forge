@@ -4,7 +4,9 @@ import { usePageMeta } from "./PageMeta";
 export function AreaFamilyPage() {
   usePageMeta({
     title: "Direito Civil e Família — GVS Advogados Associados",
-    description: "Atuação em Direito Civil e Família: divórcio, inventário, guarda, alimentos e demandas patrimoniais.",
+    description:
+      "Atuação em Direito Civil e Família: divórcio, inventário, guarda, alimentos e demandas patrimoniais.",
+    path: "/areas-de-atuacao/direito-civil-e-familia",
   });
 
   return (

@@ -10,12 +10,13 @@ export function WhoPage() {
   usePageMeta({
     title: "Quem Somos — GVS Advogados Associados",
     description: "Conheça a história, missão, valores e equipe do escritório GVS Advogados Associados.",
+    path: "/quem-somos",
   });
 
   const pillars = [
-    { icon: Target, title: "Missão", copy: "Texto placeholder sobre o propósito do escritório e a forma de servir cada cliente." },
-    { icon: Eye, title: "Visão", copy: "Texto placeholder sobre direção, posicionamento e o lugar que o escritório quer ocupar." },
-    { icon: HeartHandshake, title: "Valores", copy: "Texto placeholder com ética, transparência, comprometimento e sensibilidade." },
+    { icon: Target, title: "Missão", copy: "Desenvolver soluções jurídicas consistentes, com linguagem clara e acompanhamento próximo em cada etapa." },
+    { icon: Eye, title: "Visão", copy: "Ser referência em advocacia institucional com postura serena, técnica e experiência de atendimento refinada." },
+    { icon: HeartHandshake, title: "Valores", copy: "Ética, transparência, discrição, comprometimento e cuidado real com a trajetória do cliente." },
   ];
 
   return (
@@ -37,7 +38,9 @@ export function WhoPage() {
                 <div className="card-icon">
                   <pillar.icon size={22} />
                 </div>
-                <h3 className="card-title" style={{ fontSize: "1.85rem" }}>{pillar.title}</h3>
+                <h3 className="card-title" style={{ fontSize: "1.85rem" }}>
+                  {pillar.title}
+                </h3>
                 <p className="card-copy">{pillar.copy}</p>
               </div>
             </Reveal>
@@ -56,7 +59,8 @@ export function WhoPage() {
                 Texto placeholder para contar a origem do escritório, evolução e postura no atendimento.
               </p>
               <p className="section-text lede--dark">
-                Segundo parágrafo placeholder reforçando experiência, especialização e alinhamento com o perfil do cliente.
+                Segundo parágrafo placeholder reforçando experiência, especialização e alinhamento com o
+                perfil do cliente.
               </p>
               <p className="section-text lede--dark" style={{ marginBottom: 0 }}>
                 Terceiro trecho opcional para fechar a narrativa com uma visão mais humana e madura.
@@ -69,7 +73,11 @@ export function WhoPage() {
       <section className="section section--light">
         <div className="container-page band">
           <Reveal>
-            <SectionTitle kicker="Equipe" title="Profissionais dedicados a cada demanda." subtitle="Foto e nomes continuam como placeholders neutros para troca futura." />
+            <SectionTitle
+              kicker="Equipe"
+              title="Profissionais dedicados a cada demanda."
+              subtitle="Foto e nomes continuam como placeholders neutros para troca futura."
+            />
           </Reveal>
           <div className="band-grid band-grid--4">
             {Array.from({ length: 4 }).map((_, index) => (
@@ -82,7 +90,9 @@ export function WhoPage() {
                       </div>
                     </div>
                   </div>
-                  <h3 className="card-title" style={{ fontSize: "1.7rem" }}>Nome do Advogado {index + 1}</h3>
+                  <h3 className="card-title" style={{ fontSize: "1.7rem" }}>
+                    Nome do Advogado {index + 1}
+                  </h3>
                   <p className="card-copy">Área de atuação · OAB [placeholder]</p>
                 </div>
               </Reveal>

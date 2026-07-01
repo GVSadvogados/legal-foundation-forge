@@ -11,6 +11,7 @@ export function VideosPage() {
   usePageMeta({
     title: "Vídeos Institucionais — GVS Advogados Associados",
     description: "Vídeos institucionais e explicativos do escritório GVS Advogados Associados.",
+    path: "/videos",
   });
 
   return (
@@ -37,7 +38,10 @@ export function VideosPage() {
         </div>
       </section>
 
-      <CTASection title="Acompanhe novos conteúdos e atualizações." description="CTA placeholder para incentivar o visitante a retornar ou falar com o escritório." />
+      <CTASection
+        title="Acompanhe novos conteúdos e atualizações."
+        description="CTA placeholder para incentivar o visitante a retornar ou falar com o escritório."
+      />
     </SiteLayout>
   );
 }

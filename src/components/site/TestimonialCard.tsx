@@ -8,7 +8,7 @@ type Props = {
 
 export function TestimonialCard({ quote, name, area }: Props) {
   return (
-    <figure className="card testimonial">
+    <figure className="testimonial">
       <Quote className="quote-mark" size={28} strokeWidth={1.25} />
       <blockquote>“{quote}”</blockquote>
       <figcaption className="testimonial-meta">

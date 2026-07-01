@@ -36,12 +36,12 @@ export function ContactForm() {
         <textarea id="message" name="message" placeholder="Descreva brevemente sua situação" />
       </div>
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
+      <div className="form-actions">
         <button type="submit" className="button button--primary">
           <Send size={16} />
           Enviar mensagem
         </button>
-        {sent ? <span style={{ color: "var(--stone)", fontSize: "0.94rem" }}>Mensagem registrada (placeholder, sem envio real).</span> : null}
+        {sent ? <span className="form-feedback">Mensagem registrada como placeholder. Integre o envio no lançamento.</span> : null}
       </div>
     </form>
   );

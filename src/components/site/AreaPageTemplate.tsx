@@ -34,7 +34,7 @@ export function AreaPageTemplate({ area, title, intro, about, videos, cases, fea
       />
 
       <section className="section section--light">
-        <div className="container-page hero-grid hero-grid--two" style={{ gap: 36 }}>
+        <div className="container-page hero-grid hero-grid--two">
           <Reveal>
             <SectionTitle kicker="O que atuamos" title="Nossa forma de atuação nesta área." />
           </Reveal>
@@ -70,7 +70,7 @@ export function AreaPageTemplate({ area, title, intro, about, videos, cases, fea
       </section>
 
       <section className="section section--light">
-        <div className="container-page hero-grid hero-grid--two" style={{ gap: 36 }}>
+        <div className="container-page hero-grid hero-grid--two">
           <Reveal>
             <SectionTitle kicker="Casos comuns" title="Situações em que podemos ajudar." />
           </Reveal>
@@ -81,7 +81,9 @@ export function AreaPageTemplate({ area, title, intro, about, videos, cases, fea
                   <span className="card-bullet">
                     <Check size={14} />
                   </span>
-                  <span className="lede--dark" style={{ lineHeight: 1.7 }}>{item}</span>
+                  <span className="lede--dark" style={{ lineHeight: 1.7 }}>
+                    {item}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -104,7 +106,7 @@ export function AreaPageTemplate({ area, title, intro, about, videos, cases, fea
               <p className="lede">{featuredVideo.description}</p>
             </Reveal>
             <Reveal>
-              <div className="video-thumb" style={{ minHeight: 340 }}>
+              <div className="video-thumb video-thumb--large">
                 <div className="play-badge">
                   <div className="play-circle">
                     <Play size={28} fill="currentColor" />

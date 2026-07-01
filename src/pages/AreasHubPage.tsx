@@ -10,7 +10,9 @@ import { usePageMeta } from "./PageMeta";
 export function AreasHubPage() {
   usePageMeta({
     title: "Áreas de Atuação — GVS Advogados Associados",
-    description: "Direito do Trabalho, Direito do Consumidor e Direito Civil e Família. Conheça as áreas de atuação do escritório.",
+    description:
+      "Direito do Trabalho, Direito do Consumidor e Direito Civil e Família. Conheça as áreas de atuação do escritório.",
+    path: "/areas-de-atuacao",
   });
 
   return (

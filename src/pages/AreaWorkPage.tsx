@@ -1,4 +1,3 @@
-import { BriefcaseBusiness } from "lucide-react";
 import { AreaPageTemplate } from "@/components/site/AreaPageTemplate";
 import { usePageMeta } from "./PageMeta";
 
@@ -6,6 +5,7 @@ export function AreaWorkPage() {
   usePageMeta({
     title: "Direito do Trabalho — GVS Advogados Associados",
     description: "Atuação em Direito do Trabalho: processos, consultoria e defesa de direitos trabalhistas.",
+    path: "/areas-de-atuacao/direito-do-trabalho",
   });
 
   return (

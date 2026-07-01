@@ -42,10 +42,10 @@ export function Header() {
           </nav>
 
           <div className="header-actions">
-            <a href="https://wa.me/5500000000000" target="_blank" rel="noreferrer" className="button button--ghost">
+            <Link to="/contato" className="button button--ghost">
               <MessageCircle size={16} />
-              WhatsApp
-            </a>
+              Fale com o escritório
+            </Link>
             <button className="menu-button" onClick={() => setOpen(true)} aria-label="Abrir menu">
               <Menu size={18} />
             </button>
@@ -55,7 +55,7 @@ export function Header() {
 
       <div className={`mobile-panel ${open ? "is-open" : ""}`} aria-hidden={!open}>
         <div className="mobile-drawer">
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
+          <div className="mobile-drawer-top">
             <Link to="/" className="brand" onClick={() => setOpen(false)}>
               <span className="brand-mark">
                 <Scale size={18} />
@@ -78,11 +78,11 @@ export function Header() {
             ))}
           </div>
 
-          <div style={{ marginTop: 24 }}>
-            <a href="https://wa.me/5500000000000" target="_blank" rel="noreferrer" className="button button--primary" style={{ width: "100%" }}>
+          <div className="mobile-drawer-cta">
+            <Link to="/contato" className="button button--primary" style={{ width: "100%" }} onClick={() => setOpen(false)}>
               <MessageCircle size={16} />
-              Falar no WhatsApp
-            </a>
+              Fale com o escritório
+            </Link>
           </div>
         </div>
       </div>

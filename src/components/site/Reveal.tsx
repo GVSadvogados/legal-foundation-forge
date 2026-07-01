@@ -15,12 +15,7 @@ export function Reveal({ as: Tag = "div", delay = 0, className, style, children,
   } as CSSProperties;
 
   return (
-    <Tag
-      ref={ref}
-      className={cn("reveal", className)}
-      style={revealStyle}
-      {...props}
-    >
+    <Tag ref={ref} className={cn("reveal", className)} style={revealStyle} {...props}>
       {children}
     </Tag>
   );

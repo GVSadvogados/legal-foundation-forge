@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Linkedin, Facebook, Mail, Phone, MapPin, Scale } from "lucide-react";
+import { Mail, MapPin, Phone, Scale } from "lucide-react";
 import { navItems } from "@/data";
 
 export function Footer() {
@@ -13,24 +13,24 @@ export function Footer() {
             </span>
             <span className="brand-copy">
               <span className="brand-name">GVS Advogados</span>
-            <span className="brand-subtitle">Associados</span>
+              <span className="brand-subtitle">Associados</span>
             </span>
           </div>
           <h3 className="footer-title">Advocacia institucional com presença clara, elegante e funcional.</h3>
-          <p style={{ maxWidth: 560, lineHeight: 1.85, marginTop: 16 }}>
-            Breve texto institucional placeholder sobre a atuação do escritório, com foco em confiança, técnica e atendimento próximo.
+          <p className="footer-copy">
+            Texto institucional placeholder sobre a atuação do escritório, com foco em confiança,
+            técnica e atendimento próximo. A proposta visual foi afinada para transmitir sobriedade
+            sem perder calor humano.
           </p>
-          <div style={{ display: "flex", gap: 12, marginTop: 20 }}>
-            {[Instagram, Linkedin, Facebook].map((Icon, index) => (
-              <a key={index} href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="icon-button" aria-label="Rede social">
-                <Icon size={16} />
-              </a>
-            ))}
+          <div className="trust-row trust-row--footer">
+            <span className="trust-pill">OAB [placeholder]</span>
+            <span className="trust-pill">Atendimento personalizado</span>
+            <span className="trust-pill">Atuação estratégica</span>
           </div>
         </div>
 
         <div>
-          <h4 style={{ color: "#fff", fontFamily: "Cormorant Garamond, Georgia, serif", fontSize: "1.6rem", margin: "0 0 18px" }}>Navegação</h4>
+          <h4 className="footer-heading">Navegação</h4>
           <div className="footer-links">
             {navItems.map((item) => (
               <Link key={item.to} to={item.to}>
@@ -41,11 +41,17 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 style={{ color: "#fff", fontFamily: "Cormorant Garamond, Georgia, serif", fontSize: "1.6rem", margin: "0 0 18px" }}>Contato</h4>
+          <h4 className="footer-heading">Contato</h4>
           <div className="footer-links">
-            <span style={{ display: "inline-flex", gap: 10, alignItems: "center" }}><Phone size={16} /> [Telefone placeholder]</span>
-            <span style={{ display: "inline-flex", gap: 10, alignItems: "center" }}><Mail size={16} /> [email@placeholder.com.br]</span>
-            <span style={{ display: "inline-flex", gap: 10, alignItems: "center" }}><MapPin size={16} /> [Endereço placeholder]</span>
+            <span className="footer-contact">
+              <Phone size={16} /> [+55 (00) 0000-0000]
+            </span>
+            <span className="footer-contact">
+              <Mail size={16} /> [contato@seudominio.com.br]
+            </span>
+            <span className="footer-contact">
+              <MapPin size={16} /> [Rua Placeholder, 000 — Bairro, Cidade/UF]
+            </span>
           </div>
         </div>
       </div>

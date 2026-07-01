@@ -4,7 +4,9 @@ import { usePageMeta } from "./PageMeta";
 export function AreaConsumerPage() {
   usePageMeta({
     title: "Direito do Consumidor — GVS Advogados Associados",
-    description: "Defesa dos direitos do consumidor em relações de consumo abusivas, cobranças indevidas e falhas de serviço.",
+    description:
+      "Defesa dos direitos do consumidor em relações de consumo abusivas, cobranças indevidas e falhas de serviço.",
+    path: "/areas-de-atuacao/direito-do-consumidor",
   });
 
   return (
@@ -29,7 +31,8 @@ export function AreaConsumerPage() {
       ]}
       featuredVideo={{
         title: "Overbooking, atrasos e cancelamentos de voo.",
-        description: "Bloco destaque sugerido para reforçar o conteúdo da área com um tema recorrente e visualmente mais forte.",
+        description:
+          "Bloco destaque sugerido para reforçar o conteúdo da área com um tema recorrente e visualmente mais forte.",
       }}
     />
   );

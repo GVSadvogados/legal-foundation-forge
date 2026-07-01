@@ -10,13 +10,15 @@ import { usePageMeta } from "./PageMeta";
 export function ContactPage() {
   usePageMeta({
     title: "Contato — GVS Advogados Associados",
-    description: "Fale com o escritório GVS Advogados Associados. Telefone, e-mail, WhatsApp, endereço e formulário de contato.",
+    description:
+      "Fale com o escritório GVS Advogados Associados. Telefone, e-mail, WhatsApp, endereço e formulário de contato.",
+    path: "/contato",
   });
 
   const items = [
     { icon: Phone, label: "Telefone", value: "[+55 (00) 0000-0000]" },
     { icon: MessageCircle, label: "WhatsApp", value: "[+55 (00) 00000-0000]" },
-    { icon: Mail, label: "E-mail", value: "[contato@placeholder.com.br]" },
+    { icon: Mail, label: "E-mail", value: "[contato@seudominio.com.br]" },
     { icon: MapPin, label: "Endereço", value: "[Rua Placeholder, 000 — Bairro, Cidade/UF]" },
     { icon: Clock, label: "Horário", value: "[Segunda a sexta, 09h às 18h]" },
   ];
@@ -51,7 +53,9 @@ export function ContactPage() {
                       <item.icon size={16} />
                     </div>
                     <div>
-                      <div className="testimonial-area" style={{ marginTop: 0 }}>{item.label}</div>
+                      <div className="testimonial-area" style={{ marginTop: 0 }}>
+                        {item.label}
+                      </div>
                       <div style={{ marginTop: 6, color: "var(--ink)", lineHeight: 1.65 }}>{item.value}</div>
                     </div>
                   </div>
