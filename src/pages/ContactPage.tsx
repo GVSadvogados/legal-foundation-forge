@@ -19,7 +19,7 @@ export function ContactPage() {
   const items = [
     { icon: Phone, label: "Telefone", value: sitePhoneDisplay },
     { icon: MessageCircle, label: "WhatsApp", value: sitePhoneDisplay },
-    { icon: Mail, label: "E-mail", value: "contato@gvsadvocacia.com" },
+    { icon: Mail, label: "E-mail", value: "gillianoadv@gvsadvocacia.com" },
     { icon: MapPin, label: "Endereço", value: "Endereço profissional a ser informado" },
     { icon: Clock, label: "Horário", value: "Segunda a sexta, das 8h às 18h" },
   ];

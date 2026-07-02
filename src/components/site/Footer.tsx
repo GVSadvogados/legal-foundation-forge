@@ -45,7 +45,7 @@ export function Footer() {
               <Phone size={16} /> {sitePhoneDisplay}
             </span>
             <span className="footer-contact">
-              <Mail size={16} /> contato@gvsadvocacia.com
+              <Mail size={16} /> gillianoadv@gvsadvocacia.com
             </span>
             <span className="footer-contact">
               <MapPin size={16} /> Endereço profissional a ser informado
