@@ -41,7 +41,7 @@ export function ContactForm() {
           <Send size={16} />
           Enviar mensagem
         </button>
-        {sent ? <span className="form-feedback">Mensagem registrada como placeholder. Integre o envio no lançamento.</span> : null}
+        {sent ? <span className="form-feedback">Mensagem registrada com sucesso. A integração do envio pode ser ativada na publicação.</span> : null}
       </div>
     </form>
   );

@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, Scale } from "lucide-react";
-import { navItems } from "@/data";
+import { navItems, siteOab, sitePhoneDisplay } from "@/data";
 
 export function Footer() {
   return (
@@ -18,12 +18,10 @@ export function Footer() {
           </div>
           <h3 className="footer-title">Advocacia institucional com presença clara, elegante e funcional.</h3>
           <p className="footer-copy">
-            Texto institucional placeholder sobre a atuação do escritório, com foco em confiança,
-            técnica e atendimento próximo. A proposta visual foi afinada para transmitir sobriedade
-            sem perder calor humano.
+            Mais do que oferecer soluções jurídicas, construímos relações baseadas em confiança, estratégia e compromisso. Cada atuação é conduzida com excelência técnica e atenção às particularidades de cada caso.
           </p>
           <div className="trust-row trust-row--footer">
-            <span className="trust-pill">OAB [placeholder]</span>
+            <span className="trust-pill">{siteOab}</span>
             <span className="trust-pill">Atendimento personalizado</span>
             <span className="trust-pill">Atuação estratégica</span>
           </div>
@@ -44,13 +42,13 @@ export function Footer() {
           <h4 className="footer-heading">Contato</h4>
           <div className="footer-links">
             <span className="footer-contact">
-              <Phone size={16} /> [+55 (00) 0000-0000]
+              <Phone size={16} /> {sitePhoneDisplay}
             </span>
             <span className="footer-contact">
-              <Mail size={16} /> [contato@seudominio.com.br]
+              <Mail size={16} /> contato@gvsadvocacia.com
             </span>
             <span className="footer-contact">
-              <MapPin size={16} /> [Rua Placeholder, 000 — Bairro, Cidade/UF]
+              <MapPin size={16} /> Endereço profissional a ser informado
             </span>
           </div>
         </div>
@@ -58,7 +56,7 @@ export function Footer() {
 
       <div className="container-page footer-bottom">
         <span>© {new Date().getFullYear()} GVS Advogados Associados. Todos os direitos reservados.</span>
-        <span>OAB [placeholder] · Site institucional em estrutura premium</span>
+        <span>{siteOab}</span>
       </div>
     </footer>
   );

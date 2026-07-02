@@ -4,29 +4,33 @@ import { usePageMeta } from "./PageMeta";
 export function AreaWorkPage() {
   usePageMeta({
     title: "Direito do Trabalho — GVS Advogados Associados",
-    description: "Atuação em Direito do Trabalho: processos, consultoria e defesa de direitos trabalhistas.",
+    description: "Atuação em Direito do Trabalho com análise técnica, estratégia processual e defesa dos direitos trabalhistas.",
     path: "/areas-de-atuacao/direito-do-trabalho",
   });
 
   return (
     <AreaPageTemplate
       area="Direito do Trabalho"
-      title="Defesa técnica em relações de trabalho."
-      intro="Texto placeholder introduzindo a atuação trabalhista de forma clara, objetiva e profissional."
+      title="Atuação técnica em conflitos e direitos trabalhistas."
+      intro="Prestamos orientação jurídica em demandas trabalhistas com leitura estratégica do caso, análise documental e condução segura em todas as etapas da demanda."
       about={[
-        "Parágrafo placeholder para descrever demandas trabalhistas atendidas, como consultoria, análise documental e estratégia processual.",
-        "Parágrafo placeholder reforçando cuidado, precisão e uma comunicação mais acessível para o cliente.",
+        "Nossa atuação em Direito do Trabalho é pautada pela análise minuciosa da relação laboral, da documentação existente e dos impactos jurídicos de cada medida. Buscamos construir estratégias consistentes, voltadas à proteção dos direitos do cliente e à condução técnica do processo.",
+        "Com atendimento próximo e comunicação clara, acompanhamos cada fase da demanda com responsabilidade e diligência, assegurando que o cliente compreenda os caminhos jurídicos disponíveis para o seu caso.",
       ]}
       videos={[
-        { title: "Como organizar uma demanda trabalhista.", description: "Vídeo placeholder com visão geral da área.", duration: "04:18" },
-        { title: "Pontos que merecem atenção em rescisão.", description: "Vídeo placeholder sobre direitos e riscos comuns.", duration: "05:41" },
-        { title: "Quando buscar orientação trabalhista.", description: "Conteúdo curto para facilitar a navegação.", duration: "03:57" },
+        { title: "Acidente de trabalho: como agir.", description: "Vídeo explicativo sobre providências iniciais, documentos e direitos envolvidos.", duration: "04:18" },
+        { title: "Horas extras e jornada excessiva.", description: "Conteúdo objetivo sobre registro, prova e diferenças devidas.", duration: "05:41" },
+        { title: "Rescisão, justa causa e verbas trabalhistas.", description: "Resumo sobre situações recorrentes e orientação inicial.", duration: "03:57" },
       ]}
       cases={[
-        "Análise de vínculo, verbas rescisórias e documentação trabalhista.",
-        "Orientação em desligamentos, acordos e passivos recorrentes.",
-        "Acompanhamento de demandas com foco em clareza e proteção do cliente.",
-        "Consultoria preventiva para reduzir risco jurídico na empresa ou no caso individual.",
+        "Acidente de trabalho",
+        "Sobrecarga de jornada",
+        "Horas extras não pagas",
+        "Assédio moral no trabalho",
+        "Justa causa indevida",
+        "Rescisão sem aviso prévio",
+        "Ausência do adicional de insalubridade",
+        "Entre outros casos",
       ]}
     />
   );

@@ -3,31 +3,33 @@ import { usePageMeta } from "./PageMeta";
 
 export function AreaFamilyPage() {
   usePageMeta({
-    title: "Direito Civil e Família — GVS Advogados Associados",
+    title: "Direito Civil — GVS Advogados Associados",
     description:
-      "Atuação em Direito Civil e Família: divórcio, inventário, guarda, alimentos e demandas patrimoniais.",
+      "Atuação em Direito Civil com acompanhamento técnico em conflitos patrimoniais, contratuais e responsabilidades civis.",
     path: "/areas-de-atuacao/direito-civil-e-familia",
   });
 
   return (
     <AreaPageTemplate
-      area="Direito Civil e Família"
-      title="Suporte jurídico em questões civis e familiares."
-      intro="Texto placeholder para apresentar o cuidado, a técnica e a postura humana da atuação nesta área."
+      area="Direito Civil"
+      title="Suporte jurídico em relações civis e patrimoniais."
+      intro="Prestamos orientação em conflitos civis com análise cuidadosa dos fatos, atenção aos reflexos patrimoniais e condução estratégica das medidas adequadas ao caso."
       about={[
-        "Parágrafo placeholder descrevendo demandas civis e familiares com sensibilidade e clareza.",
-        "Parágrafo placeholder reforçando organização patrimonial, orientação processual e acompanhamento próximo.",
+        "A atuação em Direito Civil exige leitura técnica apurada, análise documental consistente e compreensão clara dos interesses envolvidos. Nosso trabalho é direcionado à proteção do patrimônio, ao equilíbrio das relações jurídicas e à busca de soluções seguras para cada situação.",
+        "Com atendimento próximo e postura diligente, acompanhamos o cliente em todas as etapas da demanda, oferecendo orientação objetiva para tomada de decisão e condução qualificada do processo.",
       ]}
       videos={[
-        { title: "Divórcio e organização do processo.", description: "Vídeo placeholder com visão institucional.", duration: "05:36" },
-        { title: "Guarda e alimentos em pauta.", description: "Conteúdo breve sobre temas familiares recorrentes.", duration: "04:29" },
-        { title: "Inventário e partilha: pontos de atenção.", description: "Vídeo placeholder sobre estrutura sucessória.", duration: "06:18" },
+        { title: "Conflitos patrimoniais e prova documental.", description: "Vídeo sobre organização de documentos e análise da demanda civil.", duration: "05:36" },
+        { title: "Responsabilidade civil e reparação de danos.", description: "Conteúdo breve sobre direitos, deveres e medidas cabíveis.", duration: "04:29" },
+        { title: "Contratos e riscos jurídicos recorrentes.", description: "Vídeo explicativo sobre cláusulas, descumprimento e prevenção.", duration: "06:18" },
       ]}
       cases={[
-        "Divórcio, guarda, alimentos e revisão de acordos.",
-        "Inventário, partilha e planejamento patrimonial.",
-        "Demandas contratuais e patrimoniais de rotina civil.",
-        "Orientação em conflitos familiares que exigem diálogo e técnica.",
+        "Conflitos patrimoniais",
+        "Responsabilidade civil",
+        "Descumprimento contratual",
+        "Cobranças e obrigações civis",
+        "Orientação preventiva em relações civis",
+        "Entre outros casos",
       ]}
     />
   );

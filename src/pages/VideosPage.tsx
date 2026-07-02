@@ -19,14 +19,14 @@ export function VideosPage() {
       <PageHero
         eyebrow="Vídeos Institucionais"
         title="Conteúdos sobre a atuação do escritório."
-        description="A página de vídeos ficou mais organizada, com cards mais consistentes e visual mais limpo."
+        description="Materiais explicativos para apresentar temas recorrentes, orientar o visitante e aproximar a linguagem jurídica do seu caso concreto."
         breadcrumbs={[{ label: "Início", to: "/" }, { label: "Vídeos" }]}
       />
 
       <section className="section section--light">
         <div className="container-page band">
           <Reveal>
-            <SectionTitle kicker="Biblioteca" title="Vídeos em grid mais equilibrado." />
+            <SectionTitle kicker="Biblioteca" title="Vídeos organizados por temas de interesse." />
           </Reveal>
           <div className="band-grid band-grid--3">
             {videoItems.map((video, index) => (
@@ -39,8 +39,8 @@ export function VideosPage() {
       </section>
 
       <CTASection
-        title="Acompanhe novos conteúdos e atualizações."
-        description="CTA placeholder para incentivar o visitante a retornar ou falar com o escritório."
+        title="Seu caso merece uma análise especializada."
+        description="Entre em contato com o escritório para receber orientação jurídica segura e direcionada à sua necessidade."
       />
     </SiteLayout>
   );

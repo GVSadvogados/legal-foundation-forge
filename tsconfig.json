@@ -15,6 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
@@ -24,6 +25,7 @@
     "src/main.tsx",
     "src/router.tsx",
     "src/data.ts",
+    "src/**/*.d.ts",
     "src/lib/**/*.ts",
     "src/hooks/**/*.ts",
     "src/components/site/**/*.tsx",

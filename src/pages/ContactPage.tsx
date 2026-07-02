@@ -5,30 +5,31 @@ import { SectionTitle } from "@/components/site/SectionTitle";
 import { ContactForm } from "@/components/site/ContactForm";
 import { MapPlaceholder } from "@/components/site/MapPlaceholder";
 import { Reveal } from "@/components/site/Reveal";
+import { sitePhoneDisplay } from "@/data";
 import { usePageMeta } from "./PageMeta";
 
 export function ContactPage() {
   usePageMeta({
     title: "Contato — GVS Advogados Associados",
     description:
-      "Fale com o escritório GVS Advogados Associados. Telefone, e-mail, WhatsApp, endereço e formulário de contato.",
+      "Fale com o escritório GVS Advogados Associados. Telefone, WhatsApp, e-mail, endereço e formulário de contato.",
     path: "/contato",
   });
 
   const items = [
-    { icon: Phone, label: "Telefone", value: "[+55 (00) 0000-0000]" },
-    { icon: MessageCircle, label: "WhatsApp", value: "[+55 (00) 00000-0000]" },
-    { icon: Mail, label: "E-mail", value: "[contato@seudominio.com.br]" },
-    { icon: MapPin, label: "Endereço", value: "[Rua Placeholder, 000 — Bairro, Cidade/UF]" },
-    { icon: Clock, label: "Horário", value: "[Segunda a sexta, 09h às 18h]" },
+    { icon: Phone, label: "Telefone", value: sitePhoneDisplay },
+    { icon: MessageCircle, label: "WhatsApp", value: sitePhoneDisplay },
+    { icon: Mail, label: "E-mail", value: "contato@gvsadvocacia.com" },
+    { icon: MapPin, label: "Endereço", value: "Endereço profissional a ser informado" },
+    { icon: Clock, label: "Horário", value: "Segunda a sexta, das 8h às 18h" },
   ];
 
   return (
     <SiteLayout>
       <PageHero
         eyebrow="Contato"
-        title="Vamos conversar sobre o seu caso."
-        description="Página de contato mais organizada, com formulário, canais diretos e mapa placeholder em equilíbrio."
+        title="Fale com o escritório."
+        description="Seu caso merece uma análise especializada. Entre em contato para receber orientação segura e atendimento próximo."
         breadcrumbs={[{ label: "Início", to: "/" }, { label: "Contato" }]}
       />
 
@@ -36,7 +37,7 @@ export function ContactPage() {
         <div className="container-page contact-grid">
           <Reveal>
             <div className="contact-card">
-              <SectionTitle kicker="Envie sua mensagem" title="Formulário de contato" />
+              <SectionTitle kicker="Envie sua mensagem" title="Solicite uma análise do seu caso" />
               <div style={{ marginTop: 28 }}>
                 <ContactForm />
               </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useMatchRoute } from "@tanstack/react-router";
 import { Menu, MessageCircle, Scale, X } from "lucide-react";
-import { navItems } from "@/data";
+import { navItems, siteWhatsappHref } from "@/data";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -42,10 +42,10 @@ export function Header() {
           </nav>
 
           <div className="header-actions">
-            <Link to="/contato" className="button button--ghost">
+            <a href={siteWhatsappHref} className="button button--ghost" target="_blank" rel="noreferrer">
               <MessageCircle size={16} />
-              Fale com o escritório
-            </Link>
+              WhatsApp
+            </a>
             <button className="menu-button" onClick={() => setOpen(true)} aria-label="Abrir menu">
               <Menu size={18} />
             </button>
@@ -79,10 +79,10 @@ export function Header() {
           </div>
 
           <div className="mobile-drawer-cta">
-            <Link to="/contato" className="button button--primary" style={{ width: "100%" }} onClick={() => setOpen(false)}>
+            <a href={siteWhatsappHref} className="button button--primary" style={{ width: "100%" }} target="_blank" rel="noreferrer">
               <MessageCircle size={16} />
-              Fale com o escritório
-            </Link>
+              WhatsApp
+            </a>
           </div>
         </div>
       </div>

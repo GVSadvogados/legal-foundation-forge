@@ -1,4 +1,4 @@
-import { Link, createRootRoute, createRoute, createRouter, Outlet, useLocation } from "@tanstack/react-router";
+import { Link, Outlet, createRootRoute, createRoute, createRouter, useLocation } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { HomePage } from "./pages/HomePage";
 import { WhoPage } from "./pages/WhoPage";
@@ -6,6 +6,8 @@ import { AreasHubPage } from "./pages/AreasHubPage";
 import { AreaWorkPage } from "./pages/AreaWorkPage";
 import { AreaConsumerPage } from "./pages/AreaConsumerPage";
 import { AreaFamilyPage } from "./pages/AreaFamilyPage";
+import { AreaPrevidenciarioPage } from "./pages/AreaPrevidenciarioPage";
+import { AreaPassengerPage } from "./pages/AreaPassengerPage";
 import { VideosPage } from "./pages/VideosPage";
 import { TestimonialsPage } from "./pages/TestimonialsPage";
 import { ContactPage } from "./pages/ContactPage";
@@ -51,6 +53,18 @@ const areaFamilyRoute = createRoute({
   component: AreaFamilyPage,
 });
 
+const areaPrevidenciarioRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/areas-de-atuacao/direito-previdenciario",
+  component: AreaPrevidenciarioPage,
+});
+
+const areaPassengerRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/areas-de-atuacao/direito-do-passageiro-aereo",
+  component: AreaPassengerPage,
+});
+
 const videosRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/videos",
@@ -76,6 +90,8 @@ const routeTree = rootRoute.addChildren([
   areaWorkRoute,
   areaConsumerRoute,
   areaFamilyRoute,
+  areaPrevidenciarioRoute,
+  areaPassengerRoute,
   videosRoute,
   testimonialsRoute,
   contactRoute,

@@ -55,8 +55,8 @@ export function AreaPageTemplate({ area, title, intro, about, videos, cases, fea
           <Reveal>
             <SectionTitle
               kicker="Vídeos explicativos"
-              title="Casos comuns explicados com clareza."
-              subtitle="Pequenos conteúdos para organizar a leitura da área e preparar o visitante para falar com o escritório."
+              title="Conteúdos para orientar com clareza."
+              subtitle="Materiais introdutórios para ajudar na compreensão da área e facilitar uma conversa mais objetiva com o escritório."
             />
           </Reveal>
           <div className="band-grid band-grid--3">
@@ -88,7 +88,7 @@ export function AreaPageTemplate({ area, title, intro, about, videos, cases, fea
               ))}
             </ul>
             <Link to="/contato" className="button button--ghost-dark" style={{ marginTop: 24, width: "fit-content" }}>
-              Fale sobre seu caso
+              Solicite uma análise do seu caso
               <ArrowRight size={16} />
             </Link>
           </Reveal>
@@ -119,8 +119,8 @@ export function AreaPageTemplate({ area, title, intro, about, videos, cases, fea
       ) : null}
 
       <CTASection
-        title="Vamos analisar sua situação com calma e estratégia."
-        description="Texto placeholder para fechar a página com um convite objetivo ao contato."
+        title="Seu caso merece uma análise especializada."
+        description="Entre em contato com o escritório e receba orientação jurídica segura, estratégica e alinhada às particularidades da sua demanda."
       />
     </SiteLayout>
   );

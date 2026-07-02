@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import { siteWhatsappHref } from "@/data";
 
 type Props = {
   eyebrow?: string;
@@ -7,7 +8,7 @@ type Props = {
   description?: string;
 };
 
-export function CTASection({ eyebrow = "Fale com o escritório", title, description }: Props) {
+export function CTASection({ eyebrow = "FALE COM O ESCRITORIO", title, description }: Props) {
   return (
     <section className="section section--dark">
       <div className="container-page hero-grid hero-grid--two" style={{ alignItems: "end" }}>
@@ -20,13 +21,13 @@ export function CTASection({ eyebrow = "Fale com o escritório", title, descript
         </div>
         <div className="hero-actions" style={{ justifyContent: "flex-end" }}>
           <Link to="/contato" className="button button--primary">
-            Agendar conversa
+            Solicite uma Análise do seu Caso
             <ArrowRight size={16} />
           </Link>
-          <Link to="/contato" className="button button--ghost">
+          <a href={siteWhatsappHref} className="button button--ghost" target="_blank" rel="noreferrer">
             <MessageCircle size={16} />
-            Ver contato
-          </Link>
+            WhatsApp
+          </a>
         </div>
       </div>
     </section>

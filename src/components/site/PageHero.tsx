@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { ChevronRight, ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronRight, MessageCircle, Scale, ShieldCheck } from "lucide-react";
+import { siteOab, sitePhoneDisplay, siteWhatsappHref } from "@/data";
 
 type Crumb = { label: string; to?: string };
 
@@ -22,11 +23,7 @@ export function PageHero({ eyebrow, title, description, breadcrumbs, primaryActi
               {breadcrumbs.map((crumb, index) => (
                 <span key={`${crumb.label}-${index}`} style={{ display: "inline-flex", gap: 10, alignItems: "center" }}>
                   {index > 0 ? <ChevronRight size={12} /> : null}
-                  {crumb.to ? (
-                    <Link to={crumb.to}>{crumb.label}</Link>
-                  ) : (
-                    <span style={{ color: "rgba(255,255,255,.82)" }}>{crumb.label}</span>
-                  )}
+                  {crumb.to ? <Link to={crumb.to}>{crumb.label}</Link> : <span style={{ color: "rgba(255,255,255,.82)" }}>{crumb.label}</span>}
                 </span>
               ))}
             </nav>
@@ -56,39 +53,33 @@ export function PageHero({ eyebrow, title, description, breadcrumbs, primaryActi
             <div className="hero-stack">
               <div className="hero-card">
                 <p className="brand-subtitle" style={{ marginBottom: 10 }}>
-                  Estrutura institucional
+                  Presença institucional
                 </p>
-                <h3 className="hero-card-title">Visual sóbrio, leitura imediata, presença premium.</h3>
+                <h3 className="hero-card-title">Atuação técnica com estratégia, clareza e proximidade.</h3>
                 <p className="hero-card-copy">
-                  O site foi reorganizado para valorizar hierarquia, respiração e fluidez entre seções.
+                  Cada demanda é conduzida com seriedade, atenção aos detalhes e acompanhamento diligente, respeitando as particularidades jurídicas de cada cliente.
                 </p>
               </div>
               <div className="hero-card">
-                <h3 className="hero-card-title">Navegação clara</h3>
-                <p className="hero-card-copy">
-                  Home, áreas, vídeos, depoimentos e contato ficam mais fáceis de escanear no desktop e no mobile.
-                </p>
-              </div>
-              <div className="hero-card">
-                <h3 className="hero-card-title">Microinterações discretas</h3>
-                <p className="hero-card-copy">
-                  Revelação por scroll, hover refinado e transições suaves sem excesso de ruído visual.
-                </p>
-              </div>
-              <div className="hero-metrics">
-                <div className="metric">
-                  <strong>08</strong>
-                  <span>rotas principais</span>
-                </div>
-                <div className="metric">
-                  <strong>03</strong>
-                  <span>áreas de atuação</span>
-                </div>
-                <div className="metric">
-                  <strong>100%</strong>
-                  <span>placeholders prontos</span>
+                <div className="hero-list">
+                  <div className="hero-list-item">
+                    <ShieldCheck size={16} />
+                    <span>{siteOab}</span>
+                  </div>
+                  <div className="hero-list-item">
+                    <Scale size={16} />
+                    <span>Mais de 7 anos de experiência na advocacia.</span>
+                  </div>
+                  <div className="hero-list-item">
+                    <MessageCircle size={16} />
+                    <span>{sitePhoneDisplay}</span>
+                  </div>
                 </div>
               </div>
+              <a href={siteWhatsappHref} className="button button--ghost" target="_blank" rel="noreferrer">
+                <MessageCircle size={16} />
+                Falar pelo WhatsApp
+              </a>
             </div>
           </div>
         </div>

@@ -1,22 +1,23 @@
-import { HeartHandshake, Target, Eye } from "lucide-react";
+import { HeartHandshake, Eye, Target } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { CTASection } from "@/components/site/CTASection";
 import { Reveal } from "@/components/site/Reveal";
+import { siteOab } from "@/data";
 import { usePageMeta } from "./PageMeta";
 
 export function WhoPage() {
   usePageMeta({
     title: "Quem Somos — GVS Advogados Associados",
-    description: "Conheça a história, missão, valores e equipe do escritório GVS Advogados Associados.",
+    description: "Conheça a história, os valores e a postura institucional do escritório GVS Advogados Associados.",
     path: "/quem-somos",
   });
 
   const pillars = [
-    { icon: Target, title: "Missão", copy: "Desenvolver soluções jurídicas consistentes, com linguagem clara e acompanhamento próximo em cada etapa." },
-    { icon: Eye, title: "Visão", copy: "Ser referência em advocacia institucional com postura serena, técnica e experiência de atendimento refinada." },
-    { icon: HeartHandshake, title: "Valores", copy: "Ética, transparência, discrição, comprometimento e cuidado real com a trajetória do cliente." },
+    { icon: Target, title: "Missão", copy: "Oferecer atuação jurídica técnica, ética e estratégica, com orientação segura e acompanhamento diligente em cada etapa da demanda." },
+    { icon: Eye, title: "Visão", copy: "Consolidar uma advocacia reconhecida pela excelência técnica, pela confiança construída com os clientes e pela seriedade na condução de cada caso." },
+    { icon: HeartHandshake, title: "Valores", copy: "Ética, transparência, compromisso, respeito às particularidades do cliente e atenção rigorosa aos desdobramentos de cada causa." },
   ];
 
   return (
@@ -24,7 +25,7 @@ export function WhoPage() {
       <PageHero
         eyebrow="Quem Somos"
         title="Uma advocacia construída sobre confiança, clareza e técnica."
-        description="Texto de abertura placeholder explicando origem, propósito e postura do escritório de forma mais sofisticada."
+        description="Conheça a postura institucional do escritório e a forma como conduzimos cada demanda com seriedade, proximidade e rigor jurídico."
         breadcrumbs={[{ label: "Início", to: "/" }, { label: "Quem Somos" }]}
         primaryAction={{ label: "Fale conosco", to: "/contato" }}
         secondaryAction={{ label: "Áreas de atuação", to: "/areas-de-atuacao" }}
@@ -56,14 +57,10 @@ export function WhoPage() {
           <Reveal>
             <div className="card card--soft">
               <p className="section-text lede--dark" style={{ marginTop: 0 }}>
-                Texto placeholder para contar a origem do escritório, evolução e postura no atendimento.
+                Consolidado há mais de 7 anos na advocacia, o escritório pauta sua atuação pela excelência técnica, pela ética e pelo compromisso com cada caso sob sua responsabilidade. Nossa trajetória é construída a partir de relações de confiança duradouras, fundamentadas na transparência, no rigor jurídico e no respeito às particularidades de cada cliente.
               </p>
               <p className="section-text lede--dark">
-                Segundo parágrafo placeholder reforçando experiência, especialização e alinhamento com o
-                perfil do cliente.
-              </p>
-              <p className="section-text lede--dark" style={{ marginBottom: 0 }}>
-                Terceiro trecho opcional para fechar a narrativa com uma visão mais humana e madura.
+                A atuação preventiva constitui um dos pilares de nosso trabalho, permitindo a identificação antecipada de riscos e a orientação segura na tomada de decisões. Aliada à experiência consolidada de nossa equipe, oferecemos um atendimento próximo e diligente, assegurando acompanhamento qualificado em todas as etapas de cada demanda.
               </p>
             </div>
           </Reveal>
@@ -74,26 +71,22 @@ export function WhoPage() {
         <div className="container-page band">
           <Reveal>
             <SectionTitle
-              kicker="Equipe"
-              title="Profissionais dedicados a cada demanda."
-              subtitle="Foto e nomes continuam como placeholders neutros para troca futura."
+              kicker="Estrutura profissional"
+              title="Atendimento próximo, postura técnica e compromisso institucional."
+              subtitle="Neste momento, o site prioriza a apresentação institucional do escritório sem blocos de imagem do ambiente físico."
             />
           </Reveal>
-          <div className="band-grid band-grid--4">
-            {Array.from({ length: 4 }).map((_, index) => (
-              <Reveal key={index} delay={index * 70}>
-                <div className="card">
-                  <div className="hero-panel" style={{ minHeight: 260, borderRadius: 22 }}>
-                    <div className="hero-panel-inner" style={{ padding: 18 }}>
-                      <div className="hero-card" style={{ marginTop: "auto" }}>
-                        Foto placeholder
-                      </div>
-                    </div>
-                  </div>
-                  <h3 className="card-title" style={{ fontSize: "1.7rem" }}>
-                    Nome do Advogado {index + 1}
-                  </h3>
-                  <p className="card-copy">Área de atuação · OAB [placeholder]</p>
+          <div className="band-grid band-grid--3">
+            {[
+              "Atuação preventiva e contenciosa com leitura estratégica do caso.",
+              "Comunicação clara, diligente e comprometida com cada etapa da demanda.",
+              `${siteOab} e presença institucional alinhada à sobriedade da advocacia.`,
+            ].map((item, index) => (
+              <Reveal key={item} delay={index * 80}>
+                <div className="card card--soft">
+                  <p className="card-copy" style={{ marginTop: 0 }}>
+                    {item}
+                  </p>
                 </div>
               </Reveal>
             ))}
@@ -101,7 +94,10 @@ export function WhoPage() {
         </div>
       </section>
 
-      <CTASection title="Conte com uma equipe experiente e organizada." description="CTA placeholder para levar o visitante ao contato de forma natural." />
+      <CTASection
+        title="Seu caso merece análise técnica e acompanhamento próximo."
+        description="Entre em contato com o escritório para receber orientação jurídica segura e alinhada às particularidades da sua demanda."
+      />
     </SiteLayout>
   );
 }

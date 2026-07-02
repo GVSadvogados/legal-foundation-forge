@@ -19,14 +19,14 @@ export function TestimonialsPage() {
       <PageHero
         eyebrow="Depoimentos"
         title="Referências de quem já foi atendido."
-        description="Cards mais limpos, com leitura confortável e aspecto institucional refinado."
+        description="Relatos que refletem a seriedade do atendimento, a clareza da orientação jurídica e o cuidado dedicado a cada demanda."
         breadcrumbs={[{ label: "Início", to: "/" }, { label: "Depoimentos" }]}
       />
 
       <section className="section section--warm">
         <div className="container-page band">
           <Reveal>
-            <SectionTitle kicker="Experiência" title="A percepção do cliente também precisa parecer organizada." />
+            <SectionTitle kicker="Experiência" title="O que dizem os clientes atendidos pelo escritório." />
           </Reveal>
           <div className="band-grid band-grid--3">
             {testimonials.map((item, index) => (
@@ -38,7 +38,7 @@ export function TestimonialsPage() {
         </div>
       </section>
 
-      <CTASection title="Seu caso pode ser o próximo." description="CTA placeholder para levar o visitante ao contato sem fricção." />
+      <CTASection title="Seu caso merece uma análise especializada." description="Entre em contato e receba orientação jurídica segura para avaliar o melhor caminho para a sua demanda." />
     </SiteLayout>
   );
 }

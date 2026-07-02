@@ -454,6 +454,25 @@ img {
   gap: 12px;
 }
 
+.hero-list {
+  display: grid;
+  gap: 14px;
+}
+
+.hero-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.7;
+}
+
+.hero-list-item svg {
+  flex: 0 0 auto;
+  margin-top: 4px;
+  color: var(--gold-soft);
+}
+
 .metric {
   padding: 18px 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -530,6 +549,10 @@ img {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.band-grid--5 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .card {
   height: 100%;
   padding: 26px;
@@ -578,7 +601,7 @@ img {
 .card-title {
   margin: 22px 0 0;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 2rem;
+  font-size: 1.85rem;
   line-height: 1.08;
   color: var(--ink);
 }
@@ -1002,6 +1025,10 @@ img {
   .band-grid--4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .band-grid--5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
@@ -1046,6 +1073,7 @@ img {
 
   .band-grid--3,
   .band-grid--4,
+  .band-grid--5,
   .field-grid,
   .hero-metrics {
     grid-template-columns: 1fr;

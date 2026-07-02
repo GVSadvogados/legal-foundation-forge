@@ -1,19 +1,19 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageCircle, Phone } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { AreaCard } from "@/components/site/AreaCard";
 import { TestimonialCard } from "@/components/site/TestimonialCard";
 import { CTASection } from "@/components/site/CTASection";
 import { Reveal } from "@/components/site/Reveal";
-import { differentiators, homeAreas, testimonials, trustSignals } from "@/data";
+import { differentiators, homeAreas, siteOab, sitePhoneDisplay, siteWhatsappHref, testimonials, trustSignals } from "@/data";
 import { usePageMeta } from "./PageMeta";
 
 export function HomePage() {
   usePageMeta({
-    title: "GVS Advogados Associados — Advocacia institucional premium",
+    title: "GVS Advogados Associados — Advocacia estratégica e personalizada",
     description:
-      "Site institucional de advocacia com visual sóbrio, navegação clara, animações discretas e estrutura profissional.",
+      "Escritório de advocacia com atuação estratégica, ética e personalizada, atendimento próximo e cinco áreas de atuação.",
     path: "/",
   });
 
@@ -22,11 +22,10 @@ export function HomePage() {
       <section className="section section--dark hero">
         <div className="container-page hero-grid hero-grid--two">
           <Reveal>
-            <div className="eyebrow">GVS Advogados Associados</div>
-            <h1 className="hero-title">Advocacia com presença elegante e leitura imediata.</h1>
+            <div className="eyebrow">Advocacia institucional</div>
+            <h1 className="hero-title">Atuação jurídica estratégica, ética e personalizada.</h1>
             <p className="lede">
-              Estrutura institucional pensada para transmitir sobriedade, confiança e direção
-              clara desde o primeiro contato, com navegação objetiva e animações discretas.
+              Da análise inicial à decisão final, cada passo é pensado para proteger seus interesses com inteligência jurídica e comprometimento genuíno.
             </p>
             <div className="trust-row">
               {trustSignals.map((item) => (
@@ -37,12 +36,13 @@ export function HomePage() {
             </div>
             <div className="hero-actions">
               <Link to="/contato" className="button button--primary">
-                Agendar conversa
+                Solicite uma Análise do seu Caso
                 <ArrowRight size={16} />
               </Link>
-              <Link to="/areas-de-atuacao" className="button button--ghost">
-                Ver áreas de atuação
-              </Link>
+              <a href={siteWhatsappHref} className="button button--ghost" target="_blank" rel="noreferrer">
+                <MessageCircle size={16} />
+                WhatsApp
+              </a>
             </div>
           </Reveal>
 
@@ -52,40 +52,41 @@ export function HomePage() {
                 <div className="hero-stack">
                   <div className="hero-card">
                     <p className="brand-subtitle" style={{ marginBottom: 10 }}>
-                      Atualização visual
+                      Atendimento estratégico
                     </p>
-                    <h3 className="hero-card-title">Mais organização, menos ruído.</h3>
+                    <h3 className="hero-card-title">Mais de 7 anos de atuação com leitura técnica e acompanhamento próximo.</h3>
                     <p className="hero-card-copy">
-                      O layout foi reorganizado para equilibrar hierarquia, respiro e fluidez entre as
-                      seções, com leitura mais segura no desktop e no mobile.
+                      Mais do que oferecer soluções jurídicas, construímos relações baseadas em confiança, estratégia e compromisso. Cada atuação é conduzida com excelência técnica e atenção às particularidades de cada caso.
                     </p>
                   </div>
                   <div className="hero-card">
-                    <h3 className="hero-card-title">Animações sutis</h3>
-                    <p className="hero-card-copy">
-                      Revelações por scroll, pequenos movimentos nos cards e hover refinado elevam a
-                      percepção do site sem exagero visual.
-                    </p>
-                  </div>
-                  <div className="hero-card">
-                    <h3 className="hero-card-title">Tom jurídico premium</h3>
-                    <p className="hero-card-copy">
-                      A linguagem visual ficou mais sóbria, com contraste, respiro e uma paleta que
-                      conversa melhor com o universo da advocacia.
-                    </p>
+                    <div className="hero-list">
+                      <div className="hero-list-item">
+                        <CheckCircle2 size={16} />
+                        <span>Atendimento personalizado e diligente em todas as etapas.</span>
+                      </div>
+                      <div className="hero-list-item">
+                        <CheckCircle2 size={16} />
+                        <span>Prevenção de riscos e orientação segura para tomada de decisão.</span>
+                      </div>
+                      <div className="hero-list-item">
+                        <Phone size={16} />
+                        <span>{sitePhoneDisplay}</span>
+                      </div>
+                    </div>
                   </div>
                   <div className="hero-metrics">
                     <div className="metric">
-                      <strong>08</strong>
-                      <span>rotas organizadas</span>
+                      <strong>05</strong>
+                      <span>áreas de atuação</span>
                     </div>
                     <div className="metric">
-                      <strong>03</strong>
-                      <span>áreas centrais</span>
+                      <strong>7+</strong>
+                      <span>anos de advocacia</span>
                     </div>
                     <div className="metric">
-                      <strong>1</strong>
-                      <span>linguagem visual unificada</span>
+                      <strong>{siteOab.replace("OAB Nº ", "")}</strong>
+                      <span>registro profissional</span>
                     </div>
                   </div>
                 </div>
@@ -98,18 +99,16 @@ export function HomePage() {
       <section className="section section--light">
         <div className="container-page band" style={{ gridTemplateColumns: "0.9fr 1.1fr", display: "grid", gap: 40 }}>
           <Reveal>
-            <SectionTitle kicker="Apresentação" title="Estrutura institucional pronta para crescer." />
+            <SectionTitle kicker="Sobre o escritório" title="Compromisso com cada cliente e cada causa." />
           </Reveal>
           <Reveal>
             <div className="card card--soft">
               <p className="section-text lede--dark" style={{ margin: 0 }}>
-                Texto institucional placeholder sobre o escritório, sua postura profissional e a forma
-                como lida com cada caso. A ideia aqui é transmitir confiança sem ficar pesado.
+                Consolidado há mais de 7 anos na advocacia, o escritório pauta sua atuação pela excelência técnica, pela ética e pelo compromisso com cada caso sob sua responsabilidade. Nossa trajetória é construída a partir de relações de confiança duradouras, fundamentadas na transparência, no rigor jurídico e no respeito às particularidades de cada cliente.
               </p>
               <div className="subtle-rule" style={{ margin: "22px 0" }} />
               <p className="section-text lede--dark" style={{ margin: 0 }}>
-                Segundo trecho placeholder reforçando atendimento humanizado, clareza na comunicação e
-                atuação técnica.
+                A atuação preventiva constitui um dos pilares de nosso trabalho, permitindo a identificação antecipada de riscos e a orientação segura na tomada de decisões. Aliada à experiência consolidada de nossa equipe, oferecemos um atendimento próximo e diligente, assegurando acompanhamento qualificado em todas as etapas de cada demanda.
               </p>
             </div>
           </Reveal>
@@ -121,11 +120,11 @@ export function HomePage() {
           <Reveal>
             <SectionTitle
               kicker="Áreas de atuação"
-              title="Três frentes principais, uma experiência mais clara."
-              subtitle="Os cards estão mais orgânicos, com melhor espaçamento e hierarquia para leitura rápida."
+              title="Cinco frentes principais, uma mesma dedicação."
+              subtitle="Escolha uma área para conhecer nossa forma de atuação, os casos comuns e os vídeos explicativos."
             />
           </Reveal>
-          <div className="band-grid band-grid--3">
+          <div className="band-grid band-grid--5">
             {homeAreas.map((area, index) => (
               <Reveal key={area.title} delay={index * 80}>
                 <AreaCard {...area} icon={area.icon} number={`0${index + 1}`} />
@@ -138,7 +137,7 @@ export function HomePage() {
       <section className="section section--light">
         <div className="container-page band">
           <Reveal>
-            <SectionTitle kicker="Diferenciais" title="O que melhora a percepção do site." align="center" />
+            <SectionTitle kicker="Diferenciais" title="Por que escolher o escritório." align="center" />
           </Reveal>
           <div className="band-grid band-grid--4">
             {differentiators.map((item, index) => (
@@ -161,7 +160,7 @@ export function HomePage() {
       <section className="section section--warm">
         <div className="container-page band">
           <Reveal>
-            <SectionTitle kicker="Depoimentos" title="Blocos mais limpos e com melhor ritmo." />
+            <SectionTitle kicker="Depoimentos" title="O que dizem os clientes atendidos." />
           </Reveal>
           <div className="band-grid band-grid--3">
             {testimonials.map((item, index) => (
@@ -174,8 +173,8 @@ export function HomePage() {
       </section>
 
       <CTASection
-        title="Agora o site está mais pronto para parecer um escritório real."
-        description="A última etapa é preencher os textos definitivos, links reais e dados de contato."
+        title="Seu caso merece uma análise especializada."
+        description="Não deixe que a falta de orientação coloque seus direitos em risco. Entre em contato e saiba qual é o melhor caminho para o seu caso."
       />
     </SiteLayout>
   );

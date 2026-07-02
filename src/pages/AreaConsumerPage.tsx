@@ -5,34 +5,38 @@ export function AreaConsumerPage() {
   usePageMeta({
     title: "Direito do Consumidor — GVS Advogados Associados",
     description:
-      "Defesa dos direitos do consumidor em relações de consumo abusivas, cobranças indevidas e falhas de serviço.",
+      "Atuação em Direito do Consumidor com foco em falhas de serviço, relações abusivas, reembolso e reparação de danos.",
     path: "/areas-de-atuacao/direito-do-consumidor",
   });
 
   return (
     <AreaPageTemplate
       area="Direito do Consumidor"
-      title="Defesa em relações de consumo."
-      intro="Texto placeholder com linguagem de entrada que reforça segurança e condução objetiva dos conflitos de consumo."
+      title="Defesa qualificada nas relações de consumo."
+      intro="Atuamos na proteção dos direitos do consumidor em situações que envolvem falhas na prestação de serviços, práticas abusivas e descumprimento de obrigações legais e contratuais."
       about={[
-        "Parágrafo placeholder descrevendo atuação em falhas de serviço, problemas contratuais e defesa do consumidor.",
-        "Parágrafo placeholder reforçando a abordagem estratégica e a leitura cuidadosa do caso.",
+        "Nossa atuação em Direito do Consumidor busca restabelecer o equilíbrio nas relações de consumo, identificando abusividades, falhas na prestação do serviço e prejuízos suportados pelo cliente. Cada caso é analisado com rigor técnico e foco em soluções efetivas.",
+        "Prestamos orientação segura desde a fase inicial do conflito, seja em tentativas de solução extrajudicial, seja na adoção das medidas judiciais adequadas, sempre com comunicação clara e acompanhamento próximo.",
       ]}
       videos={[
-        { title: "Cobrança indevida: por onde começar.", description: "Vídeo placeholder sobre análise inicial de consumo.", duration: "04:54" },
-        { title: "Falha de serviço e direitos básicos.", description: "Conteúdo breve com linguagem acessível.", duration: "05:21" },
-        { title: "Cancelamento, reembolso e resposta da empresa.", description: "Vídeo institucional sobre caminhos possíveis.", duration: "06:07" },
+        { title: "Direito de arrependimento e compras online.", description: "Vídeo sobre prazo legal, devolução e direitos do consumidor.", duration: "04:54" },
+        { title: "Produto com defeito e garantia não cumprida.", description: "Conteúdo sobre substituição, ressarcimento e providências possíveis.", duration: "05:21" },
+        { title: "Cobranças, reembolso e cláusulas abusivas.", description: "Orientação inicial sobre práticas abusivas e defesa do consumidor.", duration: "06:07" },
       ]}
       cases={[
-        "Cobranças indevidas e contratos com cláusulas abusivas.",
-        "Falha na prestação de serviço e resposta insuficiente da empresa.",
-        "Negativa de cobertura, reembolso ou solução administrativa.",
-        "Problemas com companhias aéreas, atrasos, cancelamentos e overbooking.",
+        "Direito de arrependimento em compras online",
+        "Produtos com garantia não cumprida",
+        "Propaganda enganosa ou abusiva",
+        "Produtos não entregues após a compra",
+        "Produtos com defeito sem ressarcimento ou substituição",
+        "Cláusulas contratuais abusivas que prejudiquem o consumidor",
+        "Atraso no recolhimento do FGTS",
+        "Entre outros casos",
       ]}
       featuredVideo={{
-        title: "Overbooking, atrasos e cancelamentos de voo.",
+        title: "Overbooking, cancelamentos e direitos do passageiro.",
         description:
-          "Bloco destaque sugerido para reforçar o conteúdo da área com um tema recorrente e visualmente mais forte.",
+          "Em demandas envolvendo companhias aéreas, a orientação correta faz diferença para buscar reembolso, assistência material e eventual indenização.",
       }}
     />
   );

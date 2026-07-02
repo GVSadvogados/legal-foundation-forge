@@ -11,7 +11,7 @@ export function AreasHubPage() {
   usePageMeta({
     title: "Áreas de Atuação — GVS Advogados Associados",
     description:
-      "Direito do Trabalho, Direito do Consumidor e Direito Civil e Família. Conheça as áreas de atuação do escritório.",
+      "Conheça as cinco áreas de atuação do escritório: Trabalho, Consumidor, Civil, Previdenciário e Passageiro Aéreo.",
     path: "/areas-de-atuacao",
   });
 
@@ -19,18 +19,18 @@ export function AreasHubPage() {
     <SiteLayout>
       <PageHero
         eyebrow="Áreas de Atuação"
-        title="Escolha uma área para entender como atuamos."
-        description="Página hub com três frentes principais em cards mais amplos, com melhor leitura e visual mais premium."
+        title="Escolha a área que melhor corresponde ao seu caso."
+        description="Conheça nossas principais frentes de atuação e veja como o escritório conduz cada demanda com estratégia, clareza e acompanhamento próximo."
         breadcrumbs={[{ label: "Início", to: "/" }, { label: "Áreas de Atuação" }]}
-        primaryAction={{ label: "Falar conosco", to: "/contato" }}
+        primaryAction={{ label: "Falar com o escritório", to: "/contato" }}
       />
 
       <section className="section section--light">
         <div className="container-page band">
           <Reveal>
-            <SectionTitle kicker="Especialidades" title="Três portas de entrada para o atendimento." align="center" />
+            <SectionTitle kicker="Especialidades" title="Cinco áreas para um atendimento jurídico completo." align="center" />
           </Reveal>
-          <div className="band-grid band-grid--3">
+          <div className="band-grid band-grid--5">
             {homeAreas.map((area, index) => (
               <Reveal key={area.title} delay={index * 90}>
                 <AreaCard {...area} icon={area.icon} number={`0${index + 1}`} />
@@ -40,7 +40,10 @@ export function AreasHubPage() {
         </div>
       </section>
 
-      <CTASection title="Ainda em dúvida sobre a área certa?" description="Texto placeholder convidando o visitante a entrar em contato para orientação inicial." />
+      <CTASection
+        title="Seu caso pode começar com a orientação certa."
+        description="Entre em contato para uma análise inicial e entenda qual é o melhor caminho jurídico para a sua demanda."
+      />
     </SiteLayout>
   );
 }
