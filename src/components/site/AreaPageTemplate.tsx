@@ -1,9 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Play } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { SiteLayout } from "./SiteLayout";
 import { PageHero } from "./PageHero";
 import { SectionTitle } from "./SectionTitle";
-import { VideoCard } from "./VideoCard";
 import { CTASection } from "./CTASection";
 import { Reveal } from "./Reveal";
 
@@ -12,12 +11,10 @@ type AreaPageProps = {
   title: string;
   intro: string;
   about: string[];
-  videos: { title: string; description: string; duration?: string }[];
   cases: string[];
-  featuredVideo?: { title: string; description: string };
 };
 
-export function AreaPageTemplate({ area, title, intro, about, videos, cases, featuredVideo }: AreaPageProps) {
+export function AreaPageTemplate({ area, title, intro, about, cases }: AreaPageProps) {
   return (
     <SiteLayout>
       <PageHero
@@ -33,7 +30,7 @@ export function AreaPageTemplate({ area, title, intro, about, videos, cases, fea
         secondaryAction={{ label: "Ver outras áreas", to: "/areas-de-atuacao" }}
       />
 
-      <section className="section section--light">
+      <section className="section section--soft">
         <div className="container-page hero-grid hero-grid--two">
           <Reveal>
             <SectionTitle kicker="O que atuamos" title="Nossa forma de atuação nesta área." />
@@ -50,26 +47,7 @@ export function AreaPageTemplate({ area, title, intro, about, videos, cases, fea
         </div>
       </section>
 
-      <section className="section section--warm">
-        <div className="container-page band">
-          <Reveal>
-            <SectionTitle
-              kicker="Vídeos explicativos"
-              title="Conteúdos para orientar com clareza."
-              subtitle="Materiais introdutórios para ajudar na compreensão da área e facilitar uma conversa mais objetiva com o escritório."
-            />
-          </Reveal>
-          <div className="band-grid band-grid--3">
-            {videos.map((video, index) => (
-              <Reveal key={video.title} delay={index * 70}>
-                <VideoCard {...video} />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section section--light">
+      <section className="section section--soft-alt">
         <div className="container-page hero-grid hero-grid--two">
           <Reveal>
             <SectionTitle kicker="Casos comuns" title="Situações em que podemos ajudar." />
@@ -94,29 +72,6 @@ export function AreaPageTemplate({ area, title, intro, about, videos, cases, fea
           </Reveal>
         </div>
       </section>
-
-      {featuredVideo ? (
-        <section className="section section--dark">
-          <div className="container-page hero-grid hero-grid--two">
-            <Reveal>
-              <div className="eyebrow">Vídeo destaque</div>
-              <h2 className="section-title" style={{ color: "#fff" }}>
-                {featuredVideo.title}
-              </h2>
-              <p className="lede">{featuredVideo.description}</p>
-            </Reveal>
-            <Reveal>
-              <div className="video-thumb video-thumb--large">
-                <div className="play-badge">
-                  <div className="play-circle">
-                    <Play size={28} fill="currentColor" />
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-      ) : null}
 
       <CTASection
         title="Seu caso merece uma análise especializada."

@@ -25,7 +25,7 @@ export function AreasHubPage() {
         primaryAction={{ label: "Falar com o escritório", to: "/contato" }}
       />
 
-      <section className="section section--light">
+      <section className="section section--soft">
         <div className="container-page band">
           <Reveal>
             <SectionTitle kicker="Especialidades" title="Cinco áreas para um atendimento jurídico completo." align="center" />

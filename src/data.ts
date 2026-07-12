@@ -1,6 +1,7 @@
 import {
   BadgeCheck,
   BriefcaseBusiness,
+  Building2,
   Clock3,
   HandCoins,
   Plane,
@@ -14,13 +15,12 @@ export const navItems = [
   { to: "/", label: "Início" },
   { to: "/quem-somos", label: "Quem Somos" },
   { to: "/areas-de-atuacao", label: "Áreas" },
-  { to: "/videos", label: "Vídeos" },
   { to: "/depoimentos", label: "Depoimentos" },
   { to: "/contato", label: "Contato" },
 ] as const;
 
-export const sitePhoneDisplay = "+55 62 8259-7658";
-export const sitePhoneDigits = "556282597658";
+export const sitePhoneDisplay = "62 98259-7658";
+export const sitePhoneDigits = "5562982597658";
 export const siteWhatsappHref = `https://wa.me/${sitePhoneDigits}`;
 export const siteOab = "OAB Nº 67.584";
 
@@ -42,14 +42,14 @@ export const homeAreas = [
     icon: ShieldCheck,
     title: "Direito do Consumidor",
     description:
-      "Compras online, produtos com defeito, propaganda enganosa, atraso na entrega e cláusulas abusivas.",
+      "Compras online, produtos com defeito, atraso na entrega e cláusulas abusivas em relações de consumo.",
     to: "/areas-de-atuacao/direito-do-consumidor",
   },
   {
-    icon: Scale,
+    icon: Building2,
     title: "Direito Civil",
     description:
-      "Questões patrimoniais, contratuais e conflitos civis tratados com técnica, discrição e acompanhamento próximo.",
+      "Imóveis, contratos, fraudes bancárias e cobranças contratuais com atuação técnica e acompanhamento próximo.",
     to: "/areas-de-atuacao/direito-civil-e-familia",
   },
   {
@@ -113,38 +113,5 @@ export const testimonials = [
       "Em um momento delicado para minha família, encontrei profissionais sérios e humanos, que conduziram tudo com discrição e respeito. Recomendo pela competência e, principalmente, pela forma humanizada de atender.",
     name: "Nivaldo Rosa",
     area: "Direito Civil e Família",
-  },
-];
-
-export const videoItems = [
-  {
-    title: "Entenda o que observar em um contrato.",
-    description: "Vídeo explicativo sobre análise contratual e prevenção de riscos jurídicos.",
-    duration: "04:12",
-  },
-  {
-    title: "Como agir diante de uma cobrança indevida.",
-    description: "Conteúdo objetivo sobre caminhos possíveis em defesa do consumidor.",
-    duration: "05:48",
-  },
-  {
-    title: "Direitos trabalhistas que merecem atenção.",
-    description: "Resumo visual sobre situações recorrentes na área trabalhista.",
-    duration: "06:03",
-  },
-  {
-    title: "Dúvidas comuns sobre guarda, alimentos e família.",
-    description: "Vídeo institucional com linguagem serena e orientação clara.",
-    duration: "03:56",
-  },
-  {
-    title: "Overbooking e cancelamento de voo.",
-    description: "Conteúdo explicativo sobre direitos do passageiro aéreo e indenização.",
-    duration: "07:10",
-  },
-  {
-    title: "Aposentadoria e benefícios: pontos de atenção.",
-    description: "Vídeo introdutório sobre direitos previdenciários e análise documental.",
-    duration: "05:22",
   },
 ];

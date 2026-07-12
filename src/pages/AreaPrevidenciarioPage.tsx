@@ -18,11 +18,6 @@ export function AreaPrevidenciarioPage() {
         "O Direito Previdenciário exige atenção aos detalhes do histórico laboral e contributivo, além de leitura precisa dos requisitos legais aplicáveis a cada benefício. Nossa atuação busca oferecer orientação segura para a definição da melhor estratégia administrativa ou judicial.",
         "Acompanhamos o cliente desde a análise inicial da documentação até a condução do pedido, recurso ou demanda judicial, sempre com clareza na comunicação e zelo técnico em cada etapa.",
       ]}
-      videos={[
-        { title: "Aposentadoria: pontos de atenção.", description: "Vídeo sobre requisitos, documentos e análise do histórico contributivo.", duration: "05:02" },
-        { title: "Auxílio-doença e cessação indevida.", description: "Conteúdo sobre negativas, revisões e medidas possíveis.", duration: "04:37" },
-        { title: "BPC/LOAS e benefícios assistenciais.", description: "Orientação inicial sobre elegibilidade e documentação.", duration: "05:28" },
-      ]}
       cases={[
         "Aposentadoria por idade, tempo de contribuição, invalidez ou especial (atividades de risco ou insalubres)",
         "Auxílio-doença negado ou cessado indevidamente",

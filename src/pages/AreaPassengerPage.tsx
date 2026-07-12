@@ -18,11 +18,6 @@ export function AreaPassengerPage() {
         "A legislação e a regulamentação do transporte aéreo asseguram direitos importantes ao passageiro em situações de atraso, cancelamento, alteração de voo, negativa de embarque e extravio de bagagem. Nossa atuação busca verificar o descumprimento dessas obrigações e adotar a medida adequada para cada caso.",
         "Com leitura estratégica da documentação e comunicação objetiva, acompanhamos o cliente na busca por reembolso, reacomodação, assistência material e eventual indenização, conforme a extensão do prejuízo suportado.",
       ]}
-      videos={[
-        { title: "Atraso e cancelamento de voo.", description: "Vídeo sobre assistência material, reacomodação e reembolso.", duration: "04:45" },
-        { title: "Overbooking e embarque negado.", description: "Conteúdo sobre indenização e direitos do passageiro.", duration: "05:16" },
-        { title: "Extravio de bagagem e reparação.", description: "Orientação prática sobre documentos, prova e pedido indenizatório.", duration: "04:58" },
-      ]}
       cases={[
         "Falta de informação sobre atrasos, cancelamentos ou alterações de voo",
         "Ausência de assistência material (comunicação, alimentação, hospedagem e transporte)",

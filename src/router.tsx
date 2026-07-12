@@ -8,7 +8,6 @@ import { AreaConsumerPage } from "./pages/AreaConsumerPage";
 import { AreaFamilyPage } from "./pages/AreaFamilyPage";
 import { AreaPrevidenciarioPage } from "./pages/AreaPrevidenciarioPage";
 import { AreaPassengerPage } from "./pages/AreaPassengerPage";
-import { VideosPage } from "./pages/VideosPage";
 import { TestimonialsPage } from "./pages/TestimonialsPage";
 import { ContactPage } from "./pages/ContactPage";
 
@@ -65,12 +64,6 @@ const areaPassengerRoute = createRoute({
   component: AreaPassengerPage,
 });
 
-const videosRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/videos",
-  component: VideosPage,
-});
-
 const testimonialsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/depoimentos",
@@ -92,7 +85,6 @@ const routeTree = rootRoute.addChildren([
   areaFamilyRoute,
   areaPrevidenciarioRoute,
   areaPassengerRoute,
-  videosRoute,
   testimonialsRoute,
   contactRoute,
 ]);

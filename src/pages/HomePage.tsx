@@ -96,7 +96,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section--light">
+      <section className="section section--soft">
         <div className="container-page band" style={{ gridTemplateColumns: "0.9fr 1.1fr", display: "grid", gap: 40 }}>
           <Reveal>
             <SectionTitle kicker="Sobre o escritório" title="Compromisso com cada cliente e cada causa." />
@@ -115,13 +115,13 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section--warm">
+      <section className="section section--soft-alt">
         <div className="container-page band">
           <Reveal>
             <SectionTitle
               kicker="Áreas de atuação"
               title="Cinco frentes principais, uma mesma dedicação."
-              subtitle="Escolha uma área para conhecer nossa forma de atuação, os casos comuns e os vídeos explicativos."
+              subtitle="Escolha uma área para conhecer nossa forma de atuação e os casos mais recorrentes em cada frente."
             />
           </Reveal>
           <div className="band-grid band-grid--5">
@@ -134,7 +134,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section--light">
+      <section className="section section--soft">
         <div className="container-page band">
           <Reveal>
             <SectionTitle kicker="Diferenciais" title="Por que escolher o escritório." align="center" />
@@ -157,7 +157,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section--warm">
+      <section className="section section--soft-alt">
         <div className="container-page band">
           <Reveal>
             <SectionTitle kicker="Depoimentos" title="O que dizem os clientes atendidos." />
