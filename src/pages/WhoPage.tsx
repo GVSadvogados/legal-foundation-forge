@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { CTASection } from "@/components/site/CTASection";
+import { AttorneySpotlight } from "@/components/site/AttorneySpotlight";
 import { Reveal } from "@/components/site/Reveal";
 import { siteOab } from "@/data";
 import { usePageMeta } from "./PageMeta";
@@ -66,6 +67,8 @@ export function WhoPage() {
           </Reveal>
         </div>
       </section>
+
+      <AttorneySpotlight />
 
       <section className="section section--light">
         <div className="container-page band">

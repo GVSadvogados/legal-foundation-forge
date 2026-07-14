@@ -1,9 +1,8 @@
-import { Clock, Mail, MessageCircle, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MessageCircle, Phone } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionTitle } from "@/components/site/SectionTitle";
-import { ContactForm } from "@/components/site/ContactForm";
-import { MapPlaceholder } from "@/components/site/MapPlaceholder";
+import { AttorneySpotlight } from "@/components/site/AttorneySpotlight";
 import { Reveal } from "@/components/site/Reveal";
 import { sitePhoneDisplay } from "@/data";
 import { usePageMeta } from "./PageMeta";
@@ -20,7 +19,6 @@ export function ContactPage() {
     { icon: Phone, label: "Telefone", value: sitePhoneDisplay },
     { icon: MessageCircle, label: "WhatsApp", value: sitePhoneDisplay },
     { icon: Mail, label: "E-mail", value: "gillianoadv@gvsadvocacia.com" },
-    { icon: MapPin, label: "Endereço", value: "Endereço profissional a ser informado" },
     { icon: Clock, label: "Horário", value: "Segunda a sexta, das 8h às 18h" },
   ];
 
@@ -33,19 +31,12 @@ export function ContactPage() {
         breadcrumbs={[{ label: "Início", to: "/" }, { label: "Contato" }]}
       />
 
-      <section className="section section--light">
-        <div className="container-page contact-grid">
-          <Reveal>
-            <div className="contact-card">
-              <SectionTitle kicker="Envie sua mensagem" title="Solicite uma análise do seu caso" />
-              <div style={{ marginTop: 28 }}>
-                <ContactForm />
-              </div>
-            </div>
-          </Reveal>
+      <AttorneySpotlight compact />
 
+      <section className="section section--soft">
+        <div className="container-page">
           <Reveal>
-            <div className="contact-card">
+            <div className="contact-card contact-card--compact">
               <SectionTitle kicker="Canais diretos" title="Fale com o escritório" />
               <div className="contact-stack" style={{ marginTop: 24 }}>
                 {items.map((item) => (
@@ -61,9 +52,6 @@ export function ContactPage() {
                     </div>
                   </div>
                 ))}
-              </div>
-              <div style={{ marginTop: 22 }}>
-                <MapPlaceholder />
               </div>
             </div>
           </Reveal>
