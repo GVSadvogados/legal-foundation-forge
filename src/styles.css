@@ -284,7 +284,7 @@ img {
 }
 
 .section {
-  padding: clamp(4rem, 7vw, 6.5rem) 0;
+  padding: clamp(3.5rem, 6vw, 5.75rem) 0;
 }
 
 .section--dark {
@@ -343,7 +343,7 @@ img {
   position: relative;
   z-index: 1;
   display: grid;
-  gap: 40px;
+  gap: 32px;
   align-items: center;
 }
 
@@ -386,7 +386,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
 .trust-row {
@@ -500,7 +500,7 @@ img {
 
 .section-head {
   max-width: 720px;
-  margin-bottom: 34px;
+  margin-bottom: 28px;
 }
 
 .section-head--center {
@@ -540,7 +540,7 @@ img {
 
 .band-grid {
   display: grid;
-  gap: 20px;
+  gap: 18px;
 }
 
 .band-grid--3 {
@@ -567,6 +567,11 @@ img {
   background: var(--surface-strong);
   box-shadow: 0 18px 50px rgba(13, 13, 13, 0.05);
   transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.area-card {
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -947,6 +952,10 @@ img {
   line-height: 1.7;
 }
 
+.header-cta-label {
+  display: inline;
+}
+
 .footer {
   background: linear-gradient(180deg, #111111 0%, #0d0d0d 100%);
   color: rgba(255, 255, 255, 0.72);
@@ -1058,50 +1067,67 @@ img {
   .band-grid--5 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .section {
+    padding: 3.25rem 0;
+  }
 }
 
 @media (max-width: 760px) {
   .container-page {
-    width: min(var(--container), calc(100% - 1rem));
+    width: min(var(--container), calc(100% - 1.25rem));
   }
 
   .page {
-    padding-top: 72px;
+    padding-top: 70px;
+  }
+
+  .section {
+    padding: 2.85rem 0;
   }
 
   .header-row {
-    height: 72px;
-    gap: 10px;
+    height: 70px;
+    gap: 8px;
   }
 
   .brand {
-    gap: 10px;
+    gap: 9px;
     min-width: 0;
+    flex: 1 1 auto;
   }
 
   .brand-mark {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
   }
 
-  .brand-name {
-    font-size: 0.88rem;
+  .site-header .brand-name {
+    font-size: 0.96rem;
+    line-height: 0.92;
   }
 
-  .brand-subtitle {
-    font-size: 0.56rem;
-    letter-spacing: 0.24em;
+  .site-header .brand-subtitle {
+    font-size: 0.5rem;
+    letter-spacing: 0.21em;
   }
 
   .header-actions {
-    gap: 8px;
+    gap: 6px;
   }
 
   .header-actions .button {
     width: auto;
-    min-height: 44px;
-    padding: 0 14px;
-    font-size: 0.88rem;
+    min-height: 42px;
+    min-width: 42px;
+    padding: 0 12px;
+    font-size: 0.84rem;
+    border-radius: 13px;
+  }
+
+  .header-cta-label {
+    display: none;
   }
 
   .button {
@@ -1110,11 +1136,41 @@ img {
 
   .hero-title {
     max-width: none;
-    font-size: clamp(2.8rem, 13vw, 4.2rem);
+    font-size: clamp(2.35rem, 11vw, 3.5rem);
+    line-height: 0.98;
   }
 
   .lede {
     font-size: 1rem;
+    line-height: 1.72;
+    margin-top: 16px;
+  }
+
+  .eyebrow,
+  .section-kicker {
+    margin-bottom: 10px;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    line-height: 1.04;
+  }
+
+  .section-text,
+  .card-copy {
+    line-height: 1.72;
+  }
+
+  .hero-grid {
+    gap: 24px;
+  }
+
+  .hero-panel,
+  .attorney-copy,
+  .contact-card {
+    border-radius: 22px;
   }
 
   .hero-actions,
@@ -1127,6 +1183,22 @@ img {
     width: 100%;
   }
 
+  .hero-panel-inner,
+  .hero-card,
+  .contact-card,
+  .attorney-copy {
+    padding: 20px;
+  }
+
+  .hero-card-title {
+    font-size: 1.55rem;
+  }
+
+  .hero-card-copy {
+    margin-top: 10px;
+    line-height: 1.65;
+  }
+
   .band-grid--3,
   .band-grid--4,
   .band-grid--5,
@@ -1136,36 +1208,181 @@ img {
   }
 
   .card {
-    padding: 22px;
+    padding: 20px;
+    border-radius: 20px;
   }
 
-  .attorney-copy {
-    padding: 24px;
+  .area-card .card-header {
+    align-items: center;
   }
 
-  .attorney-photo {
-    min-height: 380px;
+  .area-card .card-icon {
+    width: 50px;
+    height: 50px;
+    flex-basis: 50px;
+    border-radius: 16px;
   }
 
-  .card-number {
-    font-size: 2rem;
+  .area-card .card-number {
+    display: none;
   }
 
   .card-title {
-    font-size: 1.65rem;
+    margin-top: 18px;
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+
+  .card-footer {
+    padding-top: 18px;
+    margin-top: 18px;
+  }
+
+  .trust-row,
+  .attorney-badges {
+    gap: 8px;
+  }
+
+  .trust-pill {
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 0.78rem;
+  }
+
+  .hero-metrics {
+    gap: 10px;
+  }
+
+  .metric {
+    padding: 16px 14px;
+  }
+
+  .metric strong {
+    font-size: 1.72rem;
+  }
+
+  .metric span {
+    margin-top: 6px;
+    font-size: 0.78rem;
   }
 
   .contact-item {
-    grid-template-columns: 1fr;
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px 0;
   }
 
   .contact-icon {
     width: 36px;
     height: 36px;
+    border-radius: 12px;
+  }
+
+  .attorney-photo {
+    min-height: 340px;
+    border-radius: 22px;
+  }
+
+  .attorney-name {
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+  }
+
+  .attorney-badges {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .attorney-credentials {
+    margin-top: 22px;
+    gap: 12px;
+  }
+
+  .attorney-credential {
+    gap: 10px;
+    line-height: 1.6;
+  }
+
+  .footer {
+    padding-top: 42px;
+  }
+
+  .footer-top {
+    gap: 24px;
+    padding-bottom: 28px;
+  }
+
+  .footer-title {
+    font-size: clamp(1.9rem, 9vw, 2.4rem);
+  }
+
+  .footer-copy {
+    margin-top: 12px;
+    line-height: 1.75;
+  }
+
+  .footer-heading {
+    margin-bottom: 12px;
+    font-size: 1.35rem;
   }
 
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-page {
+    width: calc(100% - 1rem);
+  }
+
+  .page {
+    padding-top: 68px;
+  }
+
+  .section {
+    padding: 2.45rem 0;
+  }
+
+  .header-row {
+    height: 68px;
+  }
+
+  .site-header .brand-subtitle {
+    display: none;
+  }
+
+  .site-header .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 10.5vw, 2.8rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.85rem, 8.5vw, 2.4rem);
+  }
+
+  .card,
+  .hero-panel-inner,
+  .hero-card,
+  .attorney-copy,
+  .contact-card {
+    padding: 18px;
+  }
+
+  .card-title {
+    font-size: 1.38rem;
+  }
+
+  .card-copy,
+  .section-text,
+  .lede--dark {
+    font-size: 0.98rem;
+  }
+
+  .attorney-photo {
+    min-height: 300px;
   }
 }

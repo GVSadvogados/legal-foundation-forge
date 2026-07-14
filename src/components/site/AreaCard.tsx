@@ -11,7 +11,7 @@ type Props = {
 
 export function AreaCard({ icon: Icon, title, description, to, number }: Props) {
   return (
-    <Link to={to} className="card">
+    <Link to={to} className="card area-card">
       <div className="card-header">
         <div className="card-icon">
           <Icon size={24} strokeWidth={1.5} />

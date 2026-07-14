@@ -44,7 +44,7 @@ export function Header() {
           <div className="header-actions">
             <a href={siteWhatsappHref} className="button button--ghost" target="_blank" rel="noreferrer">
               <MessageCircle size={16} />
-              WhatsApp
+              <span className="header-cta-label">WhatsApp</span>
             </a>
             <button className="menu-button" onClick={() => setOpen(true)} aria-label="Abrir menu">
               <Menu size={18} />
