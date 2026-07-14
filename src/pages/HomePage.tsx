@@ -97,7 +97,7 @@ export function HomePage() {
       </section>
 
       <section className="section section--soft">
-        <div className="container-page band" style={{ gridTemplateColumns: "0.9fr 1.1fr", display: "grid", gap: 40 }}>
+        <div className="container-page split-band">
           <Reveal>
             <SectionTitle kicker="Sobre o escritório" title="Compromisso com cada cliente e cada causa." />
           </Reveal>
