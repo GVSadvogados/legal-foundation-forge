@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, Scale } from "lucide-react";
-import { navItems, siteOab, sitePhoneDisplay } from "@/data";
+import { navItems, siteAddress, siteOab, sitePhoneDisplay } from "@/data";
 
 export function Footer() {
   return (
@@ -48,7 +48,7 @@ export function Footer() {
               <Mail size={16} /> gillianoadv@gvsadvocacia.com
             </span>
             <span className="footer-contact">
-              <MapPin size={16} /> Endereço profissional a ser informado
+              <MapPin size={16} /> {siteAddress}
             </span>
           </div>
         </div>

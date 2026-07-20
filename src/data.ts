@@ -22,10 +22,13 @@ export const navItems = [
 export const sitePhoneDisplay = "62 98259-7658";
 export const sitePhoneDigits = "5562982597658";
 export const siteWhatsappHref = `https://wa.me/${sitePhoneDigits}`;
+export const siteAddress =
+  "Avenida C-4, nº 931, Edifício Terra Office, Sala 1602-A, Setor Jardim América, Goiânia/GO, CEP: 74265-040";
 export const siteOab = "OAB Nº 67.584";
 export const leadAttorneyName = "Gilliano Vinícius Freitas Souza";
 export const leadAttorneyOab = "OAB-GO 67584";
 export const leadAttorneyBio = [
+  "Graduado em Direito pela UNIFASAM.",
   "Pós-graduado em Direito Previdenciário pela Universidade Anhanguera.",
   "Pós-graduação em Direito Civil e Processo Civil pelo Proordem.",
 ] as const;

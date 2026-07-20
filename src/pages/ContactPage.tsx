@@ -1,10 +1,10 @@
-import { Clock, Mail, MessageCircle, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { AttorneySpotlight } from "@/components/site/AttorneySpotlight";
 import { Reveal } from "@/components/site/Reveal";
-import { sitePhoneDisplay } from "@/data";
+import { siteAddress, sitePhoneDisplay } from "@/data";
 import { usePageMeta } from "./PageMeta";
 
 export function ContactPage() {
@@ -19,6 +19,7 @@ export function ContactPage() {
     { icon: Phone, label: "Telefone", value: sitePhoneDisplay },
     { icon: MessageCircle, label: "WhatsApp", value: sitePhoneDisplay },
     { icon: Mail, label: "E-mail", value: "gillianoadv@gvsadvocacia.com" },
+    { icon: MapPin, label: "Endereço", value: siteAddress },
     { icon: Clock, label: "Horário", value: "Segunda a sexta, das 8h às 18h" },
   ];
 
