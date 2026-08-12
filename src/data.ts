@@ -19,8 +19,8 @@ export const navItems = [
   { to: "/contato", label: "Contato" },
 ] as const;
 
-export const sitePhoneDisplay = "62 98259-7658";
-export const sitePhoneDigits = "5562982597658";
+export const sitePhoneDisplay = " 62 99176-7200";
+export const sitePhoneDigits = "5562991767200";
 export const siteWhatsappHref = `https://wa.me/${sitePhoneDigits}`;
 export const siteAddress =
   "Avenida C-4, nº 931, Edifício Terra Office, Sala 1602-A, Setor Jardim América, Goiânia/GO, CEP: 74265-040";
