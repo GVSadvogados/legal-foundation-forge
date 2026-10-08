@@ -1,5 +1,4 @@
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { TrustStrip } from "@/components/site/TrustStrip";
@@ -32,7 +31,7 @@ export function ContactPage() {
   ];
 
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow="Contato"
         title="Fale com o escritório."
@@ -92,6 +91,6 @@ export function ContactPage() {
           </Reveal>
         </div>
       </section>
-    </SiteLayout>
+    </>
   );
 }

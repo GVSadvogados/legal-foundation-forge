@@ -1167,6 +1167,32 @@ a.contact-item:hover .contact-icon {
   color: #fff;
 }
 
+.page-loader {
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+}
+
+.page-loader-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--gold);
+  animation: pageLoaderPulse 900ms ease-in-out infinite;
+}
+
+@keyframes pageLoaderPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);

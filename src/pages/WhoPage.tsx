@@ -1,5 +1,4 @@
 import { HeartHandshake, Eye, Target } from "lucide-react";
-import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { CTASection } from "@/components/site/CTASection";
@@ -22,7 +21,7 @@ export function WhoPage() {
   ];
 
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow="Quem Somos"
         title="Uma advocacia construída sobre confiança, clareza e técnica."
@@ -76,7 +75,6 @@ export function WhoPage() {
             <SectionTitle
               kicker="Estrutura profissional"
               title="Atendimento próximo, postura técnica e compromisso institucional."
-              subtitle="Neste momento, o site prioriza a apresentação institucional do escritório sem blocos de imagem do ambiente físico."
             />
           </Reveal>
           <div className="band-grid band-grid--3">
@@ -101,6 +99,6 @@ export function WhoPage() {
         title="Seu caso merece análise técnica e acompanhamento próximo."
         description="Entre em contato com o escritório para receber orientação jurídica segura e alinhada às particularidades da sua demanda."
       />
-    </SiteLayout>
+    </>
   );
 }

@@ -1,4 +1,3 @@
-import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { TestimonialCard } from "@/components/site/TestimonialCard";
@@ -15,7 +14,7 @@ export function TestimonialsPage() {
   });
 
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow="Depoimentos"
         title="Referências de quem já foi atendido."
@@ -39,6 +38,6 @@ export function TestimonialsPage() {
       </section>
 
       <CTASection title="Seu caso merece uma análise especializada." description="Entre em contato e receba orientação jurídica segura para avaliar o melhor caminho para a sua demanda." />
-    </SiteLayout>
+    </>
   );
 }

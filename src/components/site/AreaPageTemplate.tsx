@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Check } from "lucide-react";
-import { SiteLayout } from "./SiteLayout";
 import { PageHero } from "./PageHero";
 import { SectionTitle } from "./SectionTitle";
 import { CTASection } from "./CTASection";
@@ -16,7 +15,7 @@ type AreaPageProps = {
 
 export function AreaPageTemplate({ area, title, intro, about, cases }: AreaPageProps) {
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow={area}
         title={title}
@@ -77,6 +76,6 @@ export function AreaPageTemplate({ area, title, intro, about, cases }: AreaPageP
         title="Seu caso merece uma análise especializada."
         description="Entre em contato com o escritório e receba orientação jurídica segura, estratégica e alinhada às particularidades da sua demanda."
       />
-    </SiteLayout>
+    </>
   );
 }

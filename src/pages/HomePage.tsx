@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, MessageCircle, Phone } from "lucide-react";
-import { SiteLayout } from "@/components/site/SiteLayout";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { AreaCard } from "@/components/site/AreaCard";
 import { TestimonialCard } from "@/components/site/TestimonialCard";
@@ -18,7 +17,7 @@ export function HomePage() {
   });
 
   return (
-    <SiteLayout>
+    <>
       <section className="section section--dark hero">
         <div className="container-page hero-grid hero-grid--two">
           <Reveal>
@@ -188,6 +187,6 @@ export function HomePage() {
         title="Seu caso merece uma análise especializada."
         description="Não deixe que a falta de orientação coloque seus direitos em risco. Entre em contato e saiba qual é o melhor caminho para o seu caso."
       />
-    </SiteLayout>
+    </>
   );
 }

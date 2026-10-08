@@ -1,16 +1,14 @@
-import { Link, Outlet, createRootRoute, createRoute, createRouter, useLocation } from "@tanstack/react-router";
-import { useEffect } from "react";
-import { HomePage } from "./pages/HomePage";
-import { WhoPage } from "./pages/WhoPage";
-import { AreasHubPage } from "./pages/AreasHubPage";
-import { AreaWorkPage } from "./pages/AreaWorkPage";
-import { AreaConsumerPage } from "./pages/AreaConsumerPage";
-import { AreaFamilyPage } from "./pages/AreaFamilyPage";
-import { AreaPrevidenciarioPage } from "./pages/AreaPrevidenciarioPage";
-import { AreaPassengerPage } from "./pages/AreaPassengerPage";
-import { TestimonialsPage } from "./pages/TestimonialsPage";
-import { ContactPage } from "./pages/ContactPage";
-import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
+import {
+  Link,
+  Outlet,
+  createRootRoute,
+  createRoute,
+  createRouter,
+  lazyRouteComponent,
+  useLocation,
+} from "@tanstack/react-router";
+import { Suspense, useEffect } from "react";
+import { SiteLayout } from "./components/site/SiteLayout";
 
 const rootRoute = createRootRoute({
   component: RootOutlet,
@@ -20,67 +18,67 @@ const rootRoute = createRootRoute({
 const homeRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
-  component: HomePage,
+  component: lazyRouteComponent(() => import("./pages/HomePage"), "HomePage"),
 });
 
 const whoRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/quem-somos",
-  component: WhoPage,
+  component: lazyRouteComponent(() => import("./pages/WhoPage"), "WhoPage"),
 });
 
 const areasHubRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/areas-de-atuacao",
-  component: AreasHubPage,
+  component: lazyRouteComponent(() => import("./pages/AreasHubPage"), "AreasHubPage"),
 });
 
 const areaWorkRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/areas-de-atuacao/direito-do-trabalho",
-  component: AreaWorkPage,
+  component: lazyRouteComponent(() => import("./pages/AreaWorkPage"), "AreaWorkPage"),
 });
 
 const areaConsumerRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/areas-de-atuacao/direito-do-consumidor",
-  component: AreaConsumerPage,
+  component: lazyRouteComponent(() => import("./pages/AreaConsumerPage"), "AreaConsumerPage"),
 });
 
 const areaFamilyRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/areas-de-atuacao/direito-civil-e-familia",
-  component: AreaFamilyPage,
+  component: lazyRouteComponent(() => import("./pages/AreaFamilyPage"), "AreaFamilyPage"),
 });
 
 const areaPrevidenciarioRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/areas-de-atuacao/direito-previdenciario",
-  component: AreaPrevidenciarioPage,
+  component: lazyRouteComponent(() => import("./pages/AreaPrevidenciarioPage"), "AreaPrevidenciarioPage"),
 });
 
 const areaPassengerRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/areas-de-atuacao/direito-do-passageiro-aereo",
-  component: AreaPassengerPage,
+  component: lazyRouteComponent(() => import("./pages/AreaPassengerPage"), "AreaPassengerPage"),
 });
 
 const testimonialsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/depoimentos",
-  component: TestimonialsPage,
+  component: lazyRouteComponent(() => import("./pages/TestimonialsPage"), "TestimonialsPage"),
 });
 
 const contactRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/contato",
-  component: ContactPage,
+  component: lazyRouteComponent(() => import("./pages/ContactPage"), "ContactPage"),
 });
 
 const privacyPolicyRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/politica-de-privacidade",
-  component: PrivacyPolicyPage,
+  component: lazyRouteComponent(() => import("./pages/PrivacyPolicyPage"), "PrivacyPolicyPage"),
 });
 
 const routeTree = rootRoute.addChildren([
@@ -105,6 +103,14 @@ declare module "@tanstack/react-router" {
   }
 }
 
+function PageLoader() {
+  return (
+    <div className="page-loader" aria-hidden="true">
+      <span className="page-loader-dot" />
+    </div>
+  );
+}
+
 function RootOutlet() {
   const location = useLocation();
 
@@ -112,12 +118,18 @@ function RootOutlet() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  return <Outlet />;
+  return (
+    <SiteLayout>
+      <Suspense fallback={<PageLoader />}>
+        <Outlet />
+      </Suspense>
+    </SiteLayout>
+  );
 }
 
 function NotFoundPage() {
   return (
-    <div style={{ minHeight: "100vh", display: "grid", placeItems: "center", background: "var(--bg)", padding: 24 }}>
+    <div style={{ minHeight: "60vh", display: "grid", placeItems: "center", padding: 24 }}>
       <div className="card" style={{ maxWidth: 560, textAlign: "center" }}>
         <div className="eyebrow" style={{ justifyContent: "center" }}>
           Página não encontrada

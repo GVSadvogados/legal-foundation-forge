@@ -1,5 +1,4 @@
 import { FileSearch, Handshake, MessageCircle } from "lucide-react";
-import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { AreaCard } from "@/components/site/AreaCard";
@@ -35,7 +34,7 @@ export function AreasHubPage() {
   });
 
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow="Áreas de Atuação"
         title="Escolha a área que melhor corresponde ao seu caso."
@@ -86,6 +85,6 @@ export function AreasHubPage() {
         title="Seu caso pode começar com a orientação certa."
         description="Entre em contato para uma análise inicial e entenda qual é o melhor caminho jurídico para a sua demanda."
       />
-    </SiteLayout>
+    </>
   );
 }

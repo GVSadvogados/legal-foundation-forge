@@ -1,4 +1,3 @@
-import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { siteAddress, siteEmail, siteEmailHref, sitePhoneDisplay, sitePhoneTelHref } from "@/data";
@@ -62,7 +61,7 @@ export function PrivacyPolicyPage() {
   });
 
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow="Transparência"
         title="Política de Privacidade."
@@ -99,6 +98,6 @@ export function PrivacyPolicyPage() {
           </Reveal>
         </div>
       </section>
-    </SiteLayout>
+    </>
   );
 }
