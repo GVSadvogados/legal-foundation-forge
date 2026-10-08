@@ -1126,6 +1126,9 @@ a.contact-item:hover .contact-icon {
 
 .footer-links a,
 .footer-contact {
+  display: inline-block;
+  padding: 7px 0;
+  margin: -7px 0;
   color: rgba(255, 255, 255, 0.74);
   transition: color 180ms ease;
 }
@@ -1323,14 +1326,6 @@ a.contact-item:hover .contact-icon {
 }
 
 @media (max-width: 1120px) {
-  .nav {
-    display: none;
-  }
-
-  .menu-button {
-    display: inline-grid;
-  }
-
   .hero-grid--two,
   .contact-grid,
   .footer-top,
@@ -1343,6 +1338,7 @@ a.contact-item:hover .contact-icon {
     gap: 24px;
   }
 
+  .band-grid--3,
   .band-grid--4,
   .band-grid--5 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1350,6 +1346,23 @@ a.contact-item:hover .contact-icon {
 
   .section {
     padding: 3.25rem 0;
+  }
+
+  /* Once the hero collapses to a single column, the title no longer
+     needs a narrow ch-based wrap — let it use the full width instead
+     of burning vertical space on short lines. */
+  .hero-title {
+    max-width: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .nav {
+    display: none;
+  }
+
+  .menu-button {
+    display: inline-grid;
   }
 }
 
