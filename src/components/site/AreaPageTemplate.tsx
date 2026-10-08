@@ -47,7 +47,7 @@ export function AreaPageTemplate({ area, title, intro, about, cases }: AreaPageP
         </div>
       </section>
 
-      <section className="section section--soft-alt">
+      <section className="section section--soft">
         <div className="container-page hero-grid hero-grid--two">
           <Reveal>
             <SectionTitle kicker="Casos comuns" title="Situações em que podemos ajudar." />

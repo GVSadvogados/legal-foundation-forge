@@ -32,7 +32,7 @@ export function WhoPage() {
         secondaryAction={{ label: "Áreas de atuação", to: "/areas-de-atuacao" }}
       />
 
-      <section className="section section--light">
+      <section className="section section--soft">
         <div className="container-page band-grid band-grid--3">
           {pillars.map((pillar, index) => (
             <Reveal key={pillar.title} delay={index * 80}>
@@ -50,7 +50,7 @@ export function WhoPage() {
         </div>
       </section>
 
-      <section className="section section--warm">
+      <section className="section section--soft">
         <div className="container-page hero-grid hero-grid--two">
           <Reveal>
             <SectionTitle kicker="Nossa história" title="Trajetória construída caso a caso." />
@@ -70,7 +70,7 @@ export function WhoPage() {
 
       <AttorneySpotlight />
 
-      <section className="section section--light">
+      <section className="section section--soft">
         <div className="container-page band">
           <Reveal>
             <SectionTitle

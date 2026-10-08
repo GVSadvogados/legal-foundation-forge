@@ -4,13 +4,9 @@ import { leadAttorneyBio, leadAttorneyName, leadAttorneyOab } from "@/data";
 import { Reveal } from "./Reveal";
 import { SectionTitle } from "./SectionTitle";
 
-type Props = {
-  compact?: boolean;
-};
-
-export function AttorneySpotlight({ compact = false }: Props) {
+export function AttorneySpotlight() {
   return (
-    <section className={`section ${compact ? "section--soft-alt" : "section--soft"}`}>
+    <section className="section section--soft">
       <div className="container-page">
         <div className="attorney-spotlight">
           <Reveal>

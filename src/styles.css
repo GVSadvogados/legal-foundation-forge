@@ -1,6 +1,5 @@
 :root {
   --bg: #e6ddcf;
-  --bg-soft: #ddd3c3;
   --surface: #e9dfd0;
   --surface-strong: #efe6d8;
   --ink: #0d0d0d;
@@ -330,15 +329,12 @@ img {
   color: #fff;
 }
 
-.section--soft,
-.section--soft-alt,
-.section--light,
-.section--warm {
+.section--soft {
   background: var(--surface);
 }
 
-.section--soft-alt {
-  background: var(--bg-soft);
+.section--soft + .section--soft {
+  border-top: 1px solid var(--line-soft);
 }
 
 .hero {
@@ -578,6 +574,10 @@ img {
   gap: 18px;
 }
 
+.band-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .band-grid--3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -607,6 +607,41 @@ img {
 .area-card {
   position: relative;
   overflow: hidden;
+}
+
+.area-teaser-list {
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.area-card--compact {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+}
+
+.area-card--compact .card-icon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border-radius: 14px;
+}
+
+.card-title--compact {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.1;
+  flex: 1 1 auto;
+}
+
+.area-card--compact .card-footer {
+  flex: 0 0 auto;
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 0.82rem;
 }
 
 .card:hover {
@@ -997,6 +1032,60 @@ a.contact-item:hover .contact-icon {
   line-height: 1.7;
 }
 
+.trust-strip {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  border: 1px solid var(--line-soft);
+  border-radius: 20px;
+  background: var(--surface-strong);
+  box-shadow: 0 18px 50px rgba(13, 13, 13, 0.05);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.trust-strip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(175, 141, 93, 0.4);
+}
+
+.trust-strip-photo {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  border-radius: 999px;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--line-soft);
+}
+
+.trust-strip-copy {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.trust-strip-name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.3rem;
+  color: var(--ink);
+}
+
+.trust-strip-oab {
+  margin-top: 4px;
+  color: var(--stone);
+  font-size: 0.86rem;
+}
+
+.trust-strip-link {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--stone);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 .header-cta-label {
   display: inline;
 }
@@ -1373,6 +1462,7 @@ a.contact-item:hover .contact-icon {
     line-height: 1.65;
   }
 
+  .band-grid--2,
   .band-grid--3,
   .band-grid--4,
   .band-grid--5,
@@ -1388,6 +1478,19 @@ a.contact-item:hover .contact-icon {
 
   .area-card .card-header {
     align-items: center;
+  }
+
+  .area-card--compact {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .card-title--compact {
+    font-size: 1rem;
+  }
+
+  .area-card--compact .card-footer span {
+    display: none;
   }
 
   .area-card .card-icon {
@@ -1444,6 +1547,15 @@ a.contact-item:hover .contact-icon {
     grid-template-columns: 36px minmax(0, 1fr);
     gap: 12px;
     padding: 12px 0;
+  }
+
+  .trust-strip {
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+
+  .trust-strip-link span {
+    display: none;
   }
 
   .contact-icon {

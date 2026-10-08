@@ -141,4 +141,16 @@ export const testimonials = [
     name: "Nivaldo Rosa",
     area: "Direito Civil e Família",
   },
+  {
+    quote:
+      "Precisava de orientação sobre minha aposentadoria e não sabia por onde começar. Recebi uma explicação clara sobre cada etapa do processo e acompanhamento constante até a conclusão, com total transparência.",
+    name: "Marlene Aparecida",
+    area: "Direito Previdenciário",
+  },
+  {
+    quote:
+      "Tive um voo cancelado sem nenhuma assistência da companhia aérea. O escritório conduziu todo o processo com agilidade e me manteve informado em cada fase, até a solução favorável do caso.",
+    name: "Rodrigo Teixeira",
+    area: "Direito do Passageiro Aéreo",
+  },
 ];

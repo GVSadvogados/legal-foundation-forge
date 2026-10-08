@@ -23,7 +23,7 @@ export function TestimonialsPage() {
         breadcrumbs={[{ label: "Início", to: "/" }, { label: "Depoimentos" }]}
       />
 
-      <section className="section section--warm">
+      <section className="section section--soft">
         <div className="container-page band">
           <Reveal>
             <SectionTitle kicker="Experiência" title="O que dizem os clientes atendidos pelo escritório." />

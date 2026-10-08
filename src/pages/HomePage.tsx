@@ -115,21 +115,27 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section--soft-alt">
+      <section className="section section--soft">
         <div className="container-page band">
           <Reveal>
             <SectionTitle
               kicker="Áreas de atuação"
               title="Cinco frentes principais, uma mesma dedicação."
-              subtitle="Escolha uma área para conhecer nossa forma de atuação e os casos mais recorrentes em cada frente."
+              subtitle="Um resumo rápido de onde podemos ajudar — veja o detalhe de cada frente na página de áreas de atuação."
             />
           </Reveal>
-          <div className="band-grid band-grid--5">
+          <div className="area-teaser-list">
             {homeAreas.map((area, index) => (
-              <Reveal key={area.title} delay={index * 80}>
-                <AreaCard {...area} icon={area.icon} number={`0${index + 1}`} />
+              <Reveal key={area.title} delay={index * 60}>
+                <AreaCard {...area} icon={area.icon} compact />
               </Reveal>
             ))}
+          </div>
+          <div style={{ marginTop: 28, display: "flex", justifyContent: "center" }}>
+            <Link to="/areas-de-atuacao" className="button button--ghost-dark">
+              Ver todas as áreas
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
@@ -157,17 +163,23 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section--soft-alt">
+      <section className="section section--soft">
         <div className="container-page band">
           <Reveal>
             <SectionTitle kicker="Depoimentos" title="O que dizem os clientes atendidos." />
           </Reveal>
-          <div className="band-grid band-grid--3">
-            {testimonials.map((item, index) => (
+          <div className="band-grid band-grid--2">
+            {testimonials.slice(0, 2).map((item, index) => (
               <Reveal key={item.name + index} delay={index * 80}>
                 <TestimonialCard {...item} />
               </Reveal>
             ))}
+          </div>
+          <div style={{ marginTop: 28, display: "flex", justifyContent: "center" }}>
+            <Link to="/depoimentos" className="button button--ghost-dark">
+              Ver todos os depoimentos
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>

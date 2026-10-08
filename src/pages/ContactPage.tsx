@@ -2,7 +2,7 @@ import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionTitle } from "@/components/site/SectionTitle";
-import { AttorneySpotlight } from "@/components/site/AttorneySpotlight";
+import { TrustStrip } from "@/components/site/TrustStrip";
 import { ContactForm } from "@/components/site/ContactForm";
 import { MapEmbed } from "@/components/site/MapEmbed";
 import { Reveal } from "@/components/site/Reveal";
@@ -40,7 +40,7 @@ export function ContactPage() {
         breadcrumbs={[{ label: "Início", to: "/" }, { label: "Contato" }]}
       />
 
-      <AttorneySpotlight compact />
+      <TrustStrip />
 
       <section className="section section--soft">
         <div className="container-page contact-grid">
