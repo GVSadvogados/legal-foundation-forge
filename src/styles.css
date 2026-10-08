@@ -810,12 +810,6 @@ img {
   gap: 20px;
 }
 
-.field-grid {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .field {
   display: grid;
   gap: 8px;
@@ -1466,7 +1460,6 @@ a.contact-item:hover .contact-icon {
   .band-grid--3,
   .band-grid--4,
   .band-grid--5,
-  .field-grid,
   .hero-metrics {
     grid-template-columns: 1fr;
   }

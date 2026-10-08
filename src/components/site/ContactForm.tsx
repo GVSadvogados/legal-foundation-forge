@@ -2,19 +2,13 @@ import { useState, type FormEvent } from "react";
 import { MessageCircle } from "lucide-react";
 import { buildWhatsappHref, whatsappDefaultMessage } from "@/data";
 
-function buildMessage(fields: { name: string; email: string; phone: string; subject: string; message: string }) {
-  const lines = [whatsappDefaultMessage, ""];
-  lines.push(`Nome: ${fields.name.trim()}`);
-  if (fields.subject.trim()) lines.push(`Assunto: ${fields.subject.trim()}`);
-  if (fields.phone.trim()) lines.push(`Telefone: ${fields.phone.trim()}`);
-  if (fields.email.trim()) lines.push(`E-mail: ${fields.email.trim()}`);
-  lines.push(`Mensagem: ${fields.message.trim()}`);
-  return lines.join("\n");
+function buildMessage(fields: { name: string; message: string }) {
+  return [whatsappDefaultMessage, "", `Nome: ${fields.name.trim()}`, `Mensagem: ${fields.message.trim()}`].join("\n");
 }
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
-  const [fields, setFields] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
+  const [fields, setFields] = useState({ name: "", message: "" });
 
   const onChange = (key: keyof typeof fields) => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFields((prev) => ({ ...prev, [key]: event.target.value }));
@@ -30,23 +24,9 @@ export function ContactForm() {
 
   return (
     <form className="form" onSubmit={onSubmit}>
-      <div className="field-grid">
-        <div className="field">
-          <label htmlFor="name">Nome</label>
-          <input id="name" name="name" placeholder="Seu nome completo" required value={fields.name} onChange={onChange("name")} />
-        </div>
-        <div className="field">
-          <label htmlFor="email">E-mail</label>
-          <input id="email" name="email" type="email" placeholder="seu@email.com" value={fields.email} onChange={onChange("email")} />
-        </div>
-        <div className="field">
-          <label htmlFor="phone">Telefone</label>
-          <input id="phone" name="phone" placeholder="(00) 00000-0000" value={fields.phone} onChange={onChange("phone")} />
-        </div>
-        <div className="field">
-          <label htmlFor="subject">Assunto</label>
-          <input id="subject" name="subject" placeholder="Assunto da mensagem" value={fields.subject} onChange={onChange("subject")} />
-        </div>
+      <div className="field">
+        <label htmlFor="name">Nome</label>
+        <input id="name" name="name" placeholder="Seu nome completo" required value={fields.name} onChange={onChange("name")} />
       </div>
 
       <div className="field">
