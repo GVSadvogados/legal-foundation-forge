@@ -29,7 +29,7 @@ export function AreasHubPage() {
   usePageMeta({
     title: "Áreas de Atuação — GVS Advogados Associados",
     description:
-      "Conheça as cinco áreas de atuação do escritório: Trabalho, Consumidor, Civil, Previdenciário e Passageiro Aéreo.",
+      "Conheça as cinco áreas de atuação do escritório: Trabalho, Consumidor, Civil e Família, Previdenciário e Passageiro Aéreo.",
     path: "/areas-de-atuacao",
   });
 

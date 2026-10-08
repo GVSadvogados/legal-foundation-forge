@@ -15,6 +15,9 @@ export function AttorneySpotlight() {
                 src={gillianoPhoto}
                 alt={leadAttorneyName}
                 className="attorney-photo"
+                width={720}
+                height={989}
+                loading="lazy"
               />
             </div>
           </Reveal>

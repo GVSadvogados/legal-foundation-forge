@@ -9,6 +9,8 @@ import {
 } from "@tanstack/react-router";
 import { Suspense, useEffect } from "react";
 import { SiteLayout } from "./components/site/SiteLayout";
+import { ErrorBoundary } from "./components/site/ErrorBoundary";
+import { usePageMeta } from "./pages/PageMeta";
 
 const rootRoute = createRootRoute({
   component: RootOutlet,
@@ -120,14 +122,22 @@ function RootOutlet() {
 
   return (
     <SiteLayout>
-      <Suspense fallback={<PageLoader />}>
-        <Outlet />
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<PageLoader />}>
+          <Outlet />
+        </Suspense>
+      </ErrorBoundary>
     </SiteLayout>
   );
 }
 
 function NotFoundPage() {
+  usePageMeta({
+    title: "Página não encontrada — GVS Advogados Associados",
+    description: "O endereço solicitado não existe neste site.",
+    noIndex: true,
+  });
+
   return (
     <div style={{ minHeight: "60vh", display: "grid", placeItems: "center", padding: 24 }}>
       <div className="card" style={{ maxWidth: 560, textAlign: "center" }}>

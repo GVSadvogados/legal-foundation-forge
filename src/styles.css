@@ -9,6 +9,7 @@
   --line-soft: rgba(78, 64, 44, 0.16);
   --gold: #af8d5d;
   --gold-soft: #d8c29a;
+  --gold-ink: #7a5e38;
   --shadow: 0 24px 80px rgba(13, 13, 13, 0.1);
   --radius: 22px;
   --radius-sm: 14px;
@@ -377,7 +378,7 @@ img {
 
 .eyebrow {
   margin-bottom: 14px;
-  color: var(--gold);
+  color: var(--gold-ink);
   text-transform: uppercase;
   letter-spacing: 0.28em;
   font-size: 0.75rem;
@@ -535,7 +536,7 @@ img {
 
 .section-kicker {
   margin-bottom: 14px;
-  color: var(--gold);
+  color: var(--gold-ink);
   text-transform: uppercase;
   letter-spacing: 0.28em;
   font-size: 0.72rem;

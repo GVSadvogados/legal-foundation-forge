@@ -10,7 +10,7 @@ export function TrustStrip() {
       <div className="container-page">
         <Reveal>
           <Link to="/quem-somos" className="trust-strip">
-            <img src={gillianoPhoto} alt={leadAttorneyName} className="trust-strip-photo" />
+            <img src={gillianoPhoto} alt={leadAttorneyName} className="trust-strip-photo" width={720} height={989} />
             <div className="trust-strip-copy">
               <div className="trust-strip-name">{leadAttorneyName}</div>
               <div className="trust-strip-oab">{leadAttorneyOab} · Mais de 7 anos de advocacia</div>

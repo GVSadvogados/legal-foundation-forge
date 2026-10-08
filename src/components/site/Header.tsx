@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useMatchRoute } from "@tanstack/react-router";
 import { Menu, MessageCircle, Scale, X } from "lucide-react";
 import { navItems, siteWhatsappHref } from "@/data";
@@ -7,6 +7,8 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const matchRoute = useMatchRoute();
+  const menuButtonRef = useRef<HTMLButtonElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -14,6 +16,27 @@ export function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+      menuButtonRef.current?.focus();
+    };
+  }, [open]);
+
+  const closeMenu = () => setOpen(false);
 
   return (
     <>
@@ -50,17 +73,17 @@ export function Header() {
               <MessageCircle size={16} />
               <span className="header-cta-label">WhatsApp</span>
             </a>
-            <button className="menu-button" onClick={() => setOpen(true)} aria-label="Abrir menu">
+            <button className="menu-button" ref={menuButtonRef} onClick={() => setOpen(true)} aria-label="Abrir menu">
               <Menu size={18} />
             </button>
           </div>
         </div>
       </header>
 
-      <div className={`mobile-panel ${open ? "is-open" : ""}`} aria-hidden={!open}>
+      <div className={`mobile-panel ${open ? "is-open" : ""}`} role="dialog" aria-modal="true" aria-label="Menu de navegação" aria-hidden={!open}>
         <div className="mobile-drawer">
           <div className="mobile-drawer-top">
-            <Link to="/" className="brand" onClick={() => setOpen(false)}>
+            <Link to="/" className="brand" onClick={closeMenu}>
               <span className="brand-mark">
                 <Scale size={18} />
               </span>
@@ -69,7 +92,7 @@ export function Header() {
                 <span className="brand-subtitle">Associados</span>
               </span>
             </Link>
-            <button className="icon-button" onClick={() => setOpen(false)} aria-label="Fechar menu">
+            <button className="icon-button" ref={closeButtonRef} onClick={closeMenu} aria-label="Fechar menu">
               <X size={18} />
             </button>
           </div>
@@ -83,7 +106,7 @@ export function Header() {
                   to={item.to}
                   className={isActive ? "active" : ""}
                   aria-current={isActive ? "page" : undefined}
-                  onClick={() => setOpen(false)}
+                  onClick={closeMenu}
                 >
                   {item.label}
                 </Link>

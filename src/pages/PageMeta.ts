@@ -44,6 +44,7 @@ export function usePageMeta({ title, description, path = "/", image = DEFAULT_OG
     ensureMeta("og:type", "property").content = "website";
     ensureMeta("og:url", "property").content = canonicalUrl;
     ensureMeta("og:image", "property").content = image;
+    ensureMeta("og:locale", "property").content = "pt_BR";
 
     ensureMeta("twitter:card").content = "summary_large_image";
     ensureMeta("twitter:title").content = title;

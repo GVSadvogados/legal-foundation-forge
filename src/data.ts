@@ -74,9 +74,9 @@ export const homeAreas = [
   },
   {
     icon: Building2,
-    title: "Direito Civil",
+    title: "Direito Civil e Família",
     description:
-      "Imóveis, contratos, fraudes bancárias e cobranças contratuais com atuação técnica e acompanhamento próximo.",
+      "Imóveis, contratos e cobranças, além de divórcio, partilha de bens, pensão alimentícia e inventário, com atuação técnica e próxima.",
     to: "/areas-de-atuacao/direito-civil-e-familia",
   },
   {
