@@ -10,6 +10,7 @@ import { AreaPrevidenciarioPage } from "./pages/AreaPrevidenciarioPage";
 import { AreaPassengerPage } from "./pages/AreaPassengerPage";
 import { TestimonialsPage } from "./pages/TestimonialsPage";
 import { ContactPage } from "./pages/ContactPage";
+import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 
 const rootRoute = createRootRoute({
   component: RootOutlet,
@@ -76,6 +77,12 @@ const contactRoute = createRoute({
   component: ContactPage,
 });
 
+const privacyPolicyRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/politica-de-privacidade",
+  component: PrivacyPolicyPage,
+});
+
 const routeTree = rootRoute.addChildren([
   homeRoute,
   whoRoute,
@@ -87,6 +94,7 @@ const routeTree = rootRoute.addChildren([
   areaPassengerRoute,
   testimonialsRoute,
   contactRoute,
+  privacyPolicyRoute,
 ]);
 
 export const router = createRouter({ routeTree });

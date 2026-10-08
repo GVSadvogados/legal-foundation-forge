@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/site";
+import { leadAttorneyName, leadAttorneyOab, siteAddressParts, siteEmail, sitePhoneDigits } from "@/data";
 
 type PageMetaOptions = {
   title: string;
@@ -51,4 +52,39 @@ export function usePageMeta({ title, description, path = "/", image = DEFAULT_OG
 
     ensureLink("canonical").href = canonicalUrl;
   }, [description, image, noIndex, path, title]);
+}
+
+export function useOrganizationSchema() {
+  useEffect(() => {
+    const payload = {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      name: SITE_NAME,
+      url: SITE_URL,
+      image: DEFAULT_OG_IMAGE,
+      telephone: `+${sitePhoneDigits}`,
+      email: siteEmail,
+      address: {
+        "@type": "PostalAddress",
+        ...siteAddressParts,
+      },
+      areaServed: "Goiânia, GO, Brasil",
+      priceRange: "$$",
+      founder: {
+        "@type": "Person",
+        name: leadAttorneyName,
+        jobTitle: "Advogado",
+        identifier: leadAttorneyOab,
+      },
+    };
+
+    let script = document.head.querySelector('script[data-schema="organization"]') as HTMLScriptElement | null;
+    if (!script) {
+      script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.setAttribute("data-schema", "organization");
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(payload);
+  }, []);
 }

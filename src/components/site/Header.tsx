@@ -30,15 +30,19 @@ export function Header() {
           </Link>
 
           <nav className="nav">
-            {navItems.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                className={`nav-link ${matchRoute({ to: item.to, fuzzy: item.to !== "/" }) ? "active" : ""}`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = Boolean(matchRoute({ to: item.to, fuzzy: item.to !== "/" }));
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className={`nav-link ${isActive ? "active" : ""}`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="header-actions">
@@ -71,11 +75,20 @@ export function Header() {
           </div>
 
           <div className="mobile-links">
-            {navItems.map((item) => (
-              <Link key={item.to} to={item.to} onClick={() => setOpen(false)}>
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = Boolean(matchRoute({ to: item.to, fuzzy: item.to !== "/" }));
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className={isActive ? "active" : ""}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
 
           <div className="mobile-drawer-cta">

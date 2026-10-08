@@ -1,6 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, Scale } from "lucide-react";
-import { navItems, siteAddress, siteOab, sitePhoneDisplay } from "@/data";
+import {
+  navItems,
+  siteAddress,
+  siteEmail,
+  siteEmailHref,
+  siteOab,
+  sitePhoneDisplay,
+  sitePhoneTelHref,
+} from "@/data";
 
 export function Footer() {
   return (
@@ -41,12 +49,12 @@ export function Footer() {
         <div>
           <h4 className="footer-heading">Contato</h4>
           <div className="footer-links">
-            <span className="footer-contact">
+            <a className="footer-contact" href={sitePhoneTelHref}>
               <Phone size={16} /> {sitePhoneDisplay}
-            </span>
-            <span className="footer-contact">
-              <Mail size={16} /> gillianoadv@gvsadvocacia.com
-            </span>
+            </a>
+            <a className="footer-contact" href={siteEmailHref}>
+              <Mail size={16} /> {siteEmail}
+            </a>
             <span className="footer-contact">
               <MapPin size={16} /> {siteAddress}
             </span>
@@ -56,7 +64,10 @@ export function Footer() {
 
       <div className="container-page footer-bottom">
         <span>© {new Date().getFullYear()} GVS Advogados Associados. Todos os direitos reservados.</span>
-        <span>{siteOab}</span>
+        <div className="footer-bottom-links">
+          <Link to="/politica-de-privacidade">Política de Privacidade</Link>
+          <span>{siteOab}</span>
+        </div>
       </div>
     </footer>
   );

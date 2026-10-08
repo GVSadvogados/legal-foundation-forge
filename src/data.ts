@@ -19,11 +19,29 @@ export const navItems = [
   { to: "/contato", label: "Contato" },
 ] as const;
 
-export const sitePhoneDisplay = " 62 99176-7200";
+export const sitePhoneDisplay = "62 99176-7200";
 export const sitePhoneDigits = "5562991767200";
-export const siteWhatsappHref = `https://wa.me/${sitePhoneDigits}`;
+export const sitePhoneTelHref = `tel:+${sitePhoneDigits}`;
+export const siteEmail = "gillianoadv@gvsadvocacia.com";
+export const siteEmailHref = `mailto:${siteEmail}`;
+
+export const whatsappDefaultMessage =
+  "Olá! Vim pelo site e gostaria de obter mais informações sobre os serviços do escritório.";
+
+export function buildWhatsappHref(message: string = whatsappDefaultMessage) {
+  return `https://wa.me/${sitePhoneDigits}?text=${encodeURIComponent(message)}`;
+}
+
+export const siteWhatsappHref = buildWhatsappHref();
 export const siteAddress =
   "Avenida C-4, nº 931, Edifício Terra Office, Sala 1602-A, Setor Jardim América, Goiânia/GO, CEP: 74265-040";
+export const siteAddressParts = {
+  streetAddress: "Avenida C-4, nº 931, Edifício Terra Office, Sala 1602-A, Setor Jardim América",
+  addressLocality: "Goiânia",
+  addressRegion: "GO",
+  postalCode: "74265-040",
+  addressCountry: "BR",
+} as const;
 export const siteOab = "OAB Nº 67.584";
 export const leadAttorneyName = "Gilliano Vinícius Freitas Souza";
 export const leadAttorneyOab = "OAB-GO 67584";
