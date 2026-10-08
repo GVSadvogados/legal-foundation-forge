@@ -9,8 +9,13 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
   return (
     <div className="app-shell">
+      <a href="#main-content" className="skip-link">
+        Pular para o conteúdo
+      </a>
       <Header />
-      <main className="page">{children}</main>
+      <main id="main-content" className="page" tabIndex={-1}>
+        {children}
+      </main>
       <Footer />
       <CookieConsent />
     </div>

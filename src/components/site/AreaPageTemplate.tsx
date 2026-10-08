@@ -14,6 +14,8 @@ type AreaPageProps = {
 };
 
 export function AreaPageTemplate({ area, title, intro, about, cases }: AreaPageProps) {
+  const whatsappMessage = `Olá! Vim pelo site e gostaria de mais informações sobre ${area}.`;
+
   return (
     <>
       <PageHero
@@ -27,6 +29,7 @@ export function AreaPageTemplate({ area, title, intro, about, cases }: AreaPageP
         ]}
         primaryAction={{ label: "Falar com o escritório", to: "/contato" }}
         secondaryAction={{ label: "Ver outras áreas", to: "/areas-de-atuacao" }}
+        whatsappMessage={whatsappMessage}
       />
 
       <section className="section section--soft">
@@ -75,6 +78,7 @@ export function AreaPageTemplate({ area, title, intro, about, cases }: AreaPageP
       <CTASection
         title="Seu caso merece uma análise especializada."
         description="Entre em contato e receba orientação jurídica segura e estratégica para o seu caso."
+        whatsappMessage={whatsappMessage}
       />
     </>
   );

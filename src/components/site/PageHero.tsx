@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, ChevronRight, MessageCircle, Scale, ShieldCheck } from "lucide-react";
-import { siteOab, sitePhoneDisplay, siteWhatsappHref } from "@/data";
+import { buildWhatsappHref, siteOab, sitePhoneDisplay, siteWhatsappHref } from "@/data";
 
 type Crumb = { label: string; to?: string };
 
@@ -11,9 +11,12 @@ type Props = {
   breadcrumbs?: Crumb[];
   primaryAction?: { label: string; to: string };
   secondaryAction?: { label: string; to: string };
+  whatsappMessage?: string;
 };
 
-export function PageHero({ eyebrow, title, description, breadcrumbs, primaryAction, secondaryAction }: Props) {
+export function PageHero({ eyebrow, title, description, breadcrumbs, primaryAction, secondaryAction, whatsappMessage }: Props) {
+  const whatsappHref = whatsappMessage ? buildWhatsappHref(whatsappMessage) : siteWhatsappHref;
+
   return (
     <section className="section section--dark hero">
       <div className="container-page hero-grid hero-grid--two">
@@ -74,7 +77,7 @@ export function PageHero({ eyebrow, title, description, breadcrumbs, primaryActi
                   </div>
                 </div>
               </div>
-              <a href={siteWhatsappHref} className="button button--ghost" target="_blank" rel="noreferrer">
+              <a href={whatsappHref} className="button button--ghost" target="_blank" rel="noreferrer">
                 <MessageCircle size={16} />
                 Falar pelo WhatsApp
               </a>

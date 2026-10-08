@@ -1,14 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, MessageCircle } from "lucide-react";
-import { siteWhatsappHref } from "@/data";
+import { buildWhatsappHref, siteWhatsappHref } from "@/data";
 
 type Props = {
   eyebrow?: string;
   title: string;
   description?: string;
+  whatsappMessage?: string;
 };
 
-export function CTASection({ eyebrow = "FALE COM O ESCRITORIO", title, description }: Props) {
+export function CTASection({ eyebrow = "FALE COM O ESCRITORIO", title, description, whatsappMessage }: Props) {
+  const whatsappHref = whatsappMessage ? buildWhatsappHref(whatsappMessage) : siteWhatsappHref;
+
   return (
     <section className="section section--dark">
       <div className="container-page hero-grid hero-grid--two" style={{ alignItems: "end" }}>
@@ -24,7 +27,7 @@ export function CTASection({ eyebrow = "FALE COM O ESCRITORIO", title, descripti
             Solicite uma Análise do seu Caso
             <ArrowRight size={16} />
           </Link>
-          <a href={siteWhatsappHref} className="button button--ghost" target="_blank" rel="noreferrer">
+          <a href={whatsappHref} className="button button--ghost" target="_blank" rel="noreferrer">
             <MessageCircle size={16} />
             WhatsApp
           </a>
