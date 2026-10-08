@@ -12,10 +12,9 @@ export function AreaWorkPage() {
     <AreaPageTemplate
       area="Direito do Trabalho"
       title="Atuação técnica em conflitos e direitos trabalhistas."
-      intro="Prestamos orientação jurídica em demandas trabalhistas com leitura estratégica do caso, análise documental e condução segura em todas as etapas da demanda."
+      intro="Orientação jurídica em demandas trabalhistas, com leitura estratégica do caso e condução segura em cada etapa."
       about={[
-        "Nossa atuação em Direito do Trabalho é pautada pela análise minuciosa da relação laboral, da documentação existente e dos impactos jurídicos de cada medida. Buscamos construir estratégias consistentes, voltadas à proteção dos direitos do cliente e à condução técnica do processo.",
-        "Com atendimento próximo e comunicação clara, acompanhamos cada fase da demanda com responsabilidade e diligência, assegurando que o cliente compreenda os caminhos jurídicos disponíveis para o seu caso.",
+        "Analisamos a relação laboral e a documentação com rigor técnico, construindo estratégias voltadas à proteção dos direitos do cliente, com acompanhamento próximo e comunicação clara em cada fase do processo.",
       ]}
       cases={[
         "Acidente de trabalho",

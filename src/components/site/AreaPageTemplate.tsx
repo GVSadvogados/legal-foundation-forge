@@ -47,7 +47,7 @@ export function AreaPageTemplate({ area, title, intro, about, cases }: AreaPageP
       </section>
 
       <section className="section section--soft">
-        <div className="container-page hero-grid hero-grid--two">
+        <div className="container-page hero-grid hero-grid--two" style={{ alignItems: "start" }}>
           <Reveal>
             <SectionTitle kicker="Casos comuns" title="Situações em que podemos ajudar." />
           </Reveal>
@@ -74,7 +74,7 @@ export function AreaPageTemplate({ area, title, intro, about, cases }: AreaPageP
 
       <CTASection
         title="Seu caso merece uma análise especializada."
-        description="Entre em contato com o escritório e receba orientação jurídica segura, estratégica e alinhada às particularidades da sua demanda."
+        description="Entre em contato e receba orientação jurídica segura e estratégica para o seu caso."
       />
     </>
   );

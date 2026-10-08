@@ -83,7 +83,7 @@ export function AreasHubPage() {
 
       <CTASection
         title="Seu caso pode começar com a orientação certa."
-        description="Entre em contato para uma análise inicial e entenda qual é o melhor caminho jurídico para a sua demanda."
+        description="Entre em contato para uma análise inicial e entenda o melhor caminho para a sua demanda."
       />
     </>
   );

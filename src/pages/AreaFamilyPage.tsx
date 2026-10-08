@@ -13,11 +13,10 @@ export function AreaFamilyPage() {
     <AreaPageTemplate
       area="Direito Civil e Família"
       title="Suporte jurídico em relações civis, patrimoniais e familiares."
-      intro="Prestamos orientação em conflitos civis e familiares com análise cuidadosa dos fatos, atenção aos reflexos patrimoniais e emocionais e condução estratégica das medidas adequadas ao caso."
+      intro="Orientação em conflitos civis e familiares, com análise cuidadosa dos fatos e condução estratégica das medidas adequadas a cada caso."
       about={[
-        "A atuação em Direito Civil exige leitura técnica apurada, análise documental consistente e compreensão clara dos interesses envolvidos. Nosso trabalho é direcionado à proteção do patrimônio, ao equilíbrio das relações jurídicas e à busca de soluções seguras para cada situação.",
-        "Nas demandas de Direito de Família, conduzimos cada caso com discrição e sensibilidade às particularidades de cada núcleo familiar, sem abrir mão do rigor técnico necessário para a proteção dos direitos do cliente e, quando houver, dos filhos envolvidos.",
-        "Com atendimento próximo e postura diligente, acompanhamos o cliente em todas as etapas da demanda, oferecendo orientação objetiva para tomada de decisão e condução qualificada do processo, seja ele extrajudicial ou judicial.",
+        "A atuação em Direito Civil exige leitura técnica apurada e análise documental consistente, voltada à proteção do patrimônio e ao equilíbrio das relações jurídicas.",
+        "Nas demandas de família, conduzimos cada caso com discrição e sensibilidade às particularidades de cada núcleo familiar, com acompanhamento próximo em todas as etapas, judiciais ou extrajudiciais.",
       ]}
       cases={[
         "Divórcio consensual e litigioso",

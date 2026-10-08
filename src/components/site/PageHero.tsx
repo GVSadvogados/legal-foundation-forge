@@ -56,9 +56,7 @@ export function PageHero({ eyebrow, title, description, breadcrumbs, primaryActi
                   Presença institucional
                 </p>
                 <h3 className="hero-card-title">Atuação técnica com estratégia, clareza e proximidade.</h3>
-                <p className="hero-card-copy">
-                  Cada demanda é conduzida com seriedade, atenção aos detalhes e acompanhamento diligente, respeitando as particularidades jurídicas de cada cliente.
-                </p>
+                <p className="hero-card-copy">Cada demanda é conduzida com seriedade, atenção aos detalhes e acompanhamento diligente.</p>
               </div>
               <div className="hero-card">
                 <div className="hero-list">

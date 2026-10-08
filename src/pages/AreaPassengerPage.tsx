@@ -13,10 +13,9 @@ export function AreaPassengerPage() {
     <AreaPageTemplate
       area="Direito do Passageiro Aéreo"
       title="Defesa dos direitos do passageiro em viagens aéreas."
-      intro="Prestamos orientação em casos envolvendo companhias aéreas, com análise técnica dos direitos do passageiro e das medidas cabíveis para reparação dos prejuízos sofridos."
+      intro="Orientação em casos envolvendo companhias aéreas, com análise técnica dos direitos do passageiro e das medidas cabíveis."
       about={[
-        "A legislação e a regulamentação do transporte aéreo asseguram direitos importantes ao passageiro em situações de atraso, cancelamento, alteração de voo, negativa de embarque e extravio de bagagem. Nossa atuação busca verificar o descumprimento dessas obrigações e adotar a medida adequada para cada caso.",
-        "Com leitura estratégica da documentação e comunicação objetiva, acompanhamos o cliente na busca por reembolso, reacomodação, assistência material e eventual indenização, conforme a extensão do prejuízo suportado.",
+        "A regulamentação do transporte aéreo assegura direitos ao passageiro em atrasos, cancelamentos, negativa de embarque e extravio de bagagem. Avaliamos o descumprimento dessas obrigações e buscamos reembolso, reacomodação, assistência material ou indenização, conforme o prejuízo sofrido.",
       ]}
       cases={[
         "Falta de informação sobre atrasos, cancelamentos ou alterações de voo",

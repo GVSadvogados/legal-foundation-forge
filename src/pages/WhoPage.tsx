@@ -15,9 +15,9 @@ export function WhoPage() {
   });
 
   const pillars = [
-    { icon: Target, title: "Missão", copy: "Oferecer atuação jurídica técnica, ética e estratégica, com orientação segura e acompanhamento diligente em cada etapa da demanda." },
-    { icon: Eye, title: "Visão", copy: "Consolidar uma advocacia reconhecida pela excelência técnica, pela confiança construída com os clientes e pela seriedade na condução de cada caso." },
-    { icon: HeartHandshake, title: "Valores", copy: "Ética, transparência, compromisso, respeito às particularidades do cliente e atenção rigorosa aos desdobramentos de cada causa." },
+    { icon: Target, title: "Missão", copy: "Atuação jurídica técnica, ética e estratégica, com orientação segura em cada etapa da demanda." },
+    { icon: Eye, title: "Visão", copy: "Consolidar uma advocacia reconhecida pela excelência técnica e pela confiança construída com os clientes." },
+    { icon: HeartHandshake, title: "Valores", copy: "Ética, transparência, compromisso e respeito às particularidades de cada cliente e causa." },
   ];
 
   return (
@@ -57,10 +57,7 @@ export function WhoPage() {
           <Reveal>
             <div className="card card--soft">
               <p className="section-text lede--dark" style={{ marginTop: 0 }}>
-                Consolidado há mais de 7 anos na advocacia, o escritório pauta sua atuação pela excelência técnica, pela ética e pelo compromisso com cada caso sob sua responsabilidade. Nossa trajetória é construída a partir de relações de confiança duradouras, fundamentadas na transparência, no rigor jurídico e no respeito às particularidades de cada cliente.
-              </p>
-              <p className="section-text lede--dark">
-                A atuação preventiva constitui um dos pilares de nosso trabalho, permitindo a identificação antecipada de riscos e a orientação segura na tomada de decisões. Aliada à experiência consolidada de nossa equipe, oferecemos um atendimento próximo e diligente, assegurando acompanhamento qualificado em todas as etapas de cada demanda.
+                A trajetória do escritório é construída caso a caso, com relações de confiança duradouras, transparência e respeito às particularidades de cada cliente. A atuação preventiva orienta decisões seguras desde a análise inicial até a conclusão da demanda.
               </p>
             </div>
           </Reveal>
@@ -97,7 +94,7 @@ export function WhoPage() {
 
       <CTASection
         title="Seu caso merece análise técnica e acompanhamento próximo."
-        description="Entre em contato com o escritório para receber orientação jurídica segura e alinhada às particularidades da sua demanda."
+        description="Entre em contato para receber orientação jurídica segura e alinhada à sua demanda."
       />
     </>
   );

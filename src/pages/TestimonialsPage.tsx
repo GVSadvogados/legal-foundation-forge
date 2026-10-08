@@ -37,7 +37,7 @@ export function TestimonialsPage() {
         </div>
       </section>
 
-      <CTASection title="Seu caso merece uma análise especializada." description="Entre em contato e receba orientação jurídica segura para avaliar o melhor caminho para a sua demanda." />
+      <CTASection title="Seu caso merece uma análise especializada." description="Entre em contato e receba orientação jurídica segura para avaliar o melhor caminho." />
     </>
   );
 }

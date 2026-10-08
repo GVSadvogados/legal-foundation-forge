@@ -7,49 +7,40 @@ const sections = [
   {
     title: "1. Quem é o controlador dos dados",
     body: [
-      "Esta Política de Privacidade descreve como o escritório GVS Advogados Associados, inscrito sob a OAB Nº 67.584, com sede em " +
-        siteAddress +
-        ", trata os dados pessoais coletados por meio deste site, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD).",
+      "Esta política descreve como o escritório GVS Advogados Associados (OAB Nº 67.584) trata os dados pessoais coletados por meio deste site, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD).",
     ],
   },
   {
     title: "2. Quais dados coletamos",
     body: [
-      "Coletamos apenas os dados que você nos fornece voluntariamente ao preencher o formulário de contato: nome, e-mail, telefone e o conteúdo da mensagem enviada.",
-      "Este site não possui servidor próprio de armazenamento de dados: ao enviar o formulário de contato, as informações preenchidas são utilizadas exclusivamente para montar uma mensagem que é aberta diretamente no WhatsApp do escritório, para envio por você. Nenhum dado do formulário é armazenado em banco de dados ou servidor deste site.",
+      "Coletamos apenas o que você informa voluntariamente no formulário de contato: nome e mensagem. Este site não tem servidor de armazenamento — os dados são usados só para montar a mensagem aberta no WhatsApp do escritório, e nenhum fica salvo em banco de dados.",
     ],
   },
   {
     title: "3. Cookies",
     body: [
-      "Utilizamos cookies essenciais ao funcionamento do site e, quando aplicável, cookies de análise de audiência, que nos ajudam a entender como o site é utilizado e a melhorar a experiência de navegação.",
-      "Você pode gerenciar suas preferências de cookies a qualquer momento por meio das configurações do seu navegador ou limpando os dados de navegação armazenados localmente.",
+      "Utilizamos cookies essenciais ao funcionamento do site e, quando aplicável, cookies de análise de audiência. Você pode gerenciar suas preferências a qualquer momento nas configurações do navegador.",
     ],
   },
   {
     title: "4. Finalidade do tratamento",
-    body: [
-      "Os dados fornecidos por meio do formulário de contato são utilizados exclusivamente para possibilitar o primeiro contato entre você e o escritório, a fim de esclarecer dúvidas e avaliar a possibilidade de atendimento jurídico.",
-    ],
+    body: ["Os dados do formulário de contato são usados apenas para viabilizar o primeiro contato entre você e o escritório."],
   },
   {
     title: "5. Compartilhamento de dados",
     body: [
-      "Não vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros para fins comerciais. Os dados informados no formulário de contato são direcionados apenas ao WhatsApp do próprio escritório.",
+      "Não vendemos, alugamos ou compartilhamos seus dados com terceiros para fins comerciais. As informações do formulário vão apenas para o WhatsApp do escritório.",
     ],
   },
   {
     title: "6. Seus direitos como titular de dados",
     body: [
-      "Nos termos da LGPD, você tem direito a confirmar a existência de tratamento, acessar, corrigir, anonimizar, bloquear ou eliminar dados desnecessários, solicitar a portabilidade e revogar o consentimento dado, entre outros direitos previstos em lei.",
-      "Para exercer qualquer um desses direitos, entre em contato pelos canais indicados abaixo.",
+      "Nos termos da LGPD, você pode confirmar a existência de tratamento, acessar, corrigir, anonimizar, eliminar dados ou revogar o consentimento, entre outros direitos previstos em lei. Para exercê-los, use os canais de contato abaixo.",
     ],
   },
   {
     title: "7. Alterações desta política",
-    body: [
-      "Esta Política de Privacidade pode ser atualizada periodicamente para refletir melhorias no site ou mudanças legislativas. Recomendamos a consulta ocasional desta página.",
-    ],
+    body: ["Esta política pode ser atualizada periodicamente. Recomendamos a consulta ocasional desta página."],
   },
 ];
 

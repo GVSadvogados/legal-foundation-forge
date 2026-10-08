@@ -55,7 +55,7 @@ export function HomePage() {
                     </p>
                     <h3 className="hero-card-title">Mais de 7 anos de atuação com leitura técnica e acompanhamento próximo.</h3>
                     <p className="hero-card-copy">
-                      Mais do que oferecer soluções jurídicas, construímos relações baseadas em confiança, estratégia e compromisso. Cada atuação é conduzida com excelência técnica e atenção às particularidades de cada caso.
+                      Mais do que soluções jurídicas, construímos relações de confiança com excelência técnica e atenção às particularidades de cada caso.
                     </p>
                   </div>
                   <div className="hero-card">
@@ -103,11 +103,7 @@ export function HomePage() {
           <Reveal>
             <div className="card card--soft">
               <p className="section-text lede--dark" style={{ margin: 0 }}>
-                Consolidado há mais de 7 anos na advocacia, o escritório pauta sua atuação pela excelência técnica, pela ética e pelo compromisso com cada caso sob sua responsabilidade. Nossa trajetória é construída a partir de relações de confiança duradouras, fundamentadas na transparência, no rigor jurídico e no respeito às particularidades de cada cliente.
-              </p>
-              <div className="subtle-rule" style={{ margin: "22px 0" }} />
-              <p className="section-text lede--dark" style={{ margin: 0 }}>
-                A atuação preventiva constitui um dos pilares de nosso trabalho, permitindo a identificação antecipada de riscos e a orientação segura na tomada de decisões. Aliada à experiência consolidada de nossa equipe, oferecemos um atendimento próximo e diligente, assegurando acompanhamento qualificado em todas as etapas de cada demanda.
+                Consolidado há mais de 7 anos na advocacia, o escritório pauta sua atuação pela excelência técnica, pela ética e pela atuação preventiva — identificando riscos cedo e orientando a tomada de decisão com segurança, em acompanhamento próximo e diligente a cada etapa da demanda.
               </p>
             </div>
           </Reveal>
@@ -185,7 +181,7 @@ export function HomePage() {
 
       <CTASection
         title="Seu caso merece uma análise especializada."
-        description="Não deixe que a falta de orientação coloque seus direitos em risco. Entre em contato e saiba qual é o melhor caminho para o seu caso."
+        description="Entre em contato e saiba qual é o melhor caminho para o seu caso."
       />
     </>
   );

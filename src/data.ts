@@ -76,7 +76,7 @@ export const homeAreas = [
     icon: Building2,
     title: "Direito Civil e Família",
     description:
-      "Imóveis, contratos e cobranças, além de divórcio, partilha de bens, pensão alimentícia e inventário, com atuação técnica e próxima.",
+      "Imóveis, contratos e cobranças, além de divórcio, partilha de bens, pensão alimentícia e inventário.",
     to: "/areas-de-atuacao/direito-civil-e-familia",
   },
   {
@@ -100,56 +100,53 @@ export const differentiators = [
     icon: Shield,
     title: "Ética e transparência",
     description:
-      "Pautamos nossa atuação pelos princípios da probidade e da lealdade processual, mantendo os clientes devidamente cientificados quanto ao andamento processual e às estratégias jurídicas adotadas em cada demanda.",
+      "Atuação pautada pela probidade e pela lealdade processual, com clientes sempre informados sobre o andamento e a estratégia de cada caso.",
   },
   {
     icon: BadgeCheck,
     title: "Experiência consolidada",
-    description:
-      "Mais de 7 anos de exercício da advocacia nos conferiram sólida bagagem jurisprudencial e doutrinária, resultado da atuação em causas de diferentes graus de complexidade nas mais diversas searas do Direito.",
+    description: "Mais de 7 anos de advocacia em causas de diferentes graus de complexidade, em diversas áreas do Direito.",
   },
   {
     icon: Users,
     title: "Atendimento humanizado",
-    description:
-      "Reconhecemos que cada processo transcende a esfera meramente técnica, razão pela qual dedicamos atenção individualizada a cada cliente, observando as particularidades fáticas e jurídicas de sua causa.",
+    description: "Atenção individualizada a cada cliente, respeitando as particularidades fáticas e jurídicas de cada causa.",
   },
   {
     icon: Clock3,
     title: "Resposta ágil",
-    description:
-      "Comprometemo-nos com a celeridade processual e a diligência no acompanhamento de prazos e intimações, assegurando aos clientes retorno tempestivo quanto ao trâmite de suas demandas.",
+    description: "Acompanhamento diligente de prazos e intimações, com retorno rápido sobre o andamento de cada demanda.",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "Fui muito bem orientado durante todo o processo, com explicações claras sobre cada etapa. A equipe demonstrou domínio técnico e cuidado genuíno com o meu caso, o que me trouxe segurança do início ao fim.",
+      "Fui muito bem orientado durante todo o processo, com explicações claras sobre cada etapa. A equipe demonstrou domínio técnico e cuidado genuíno com o meu caso.",
     name: "Lucas Urzeda",
     area: "Direito do Trabalho",
   },
   {
     quote:
-      "Busquei o escritório para resolver um problema que parecia sem solução, e fui surpreendida pela agilidade e atenção no atendimento. Me senti amparada em cada contato, com retornos rápidos e honestos.",
+      "Busquei o escritório para resolver um problema que parecia sem solução e fui surpreendida pela agilidade e atenção no atendimento, com retornos sempre rápidos e honestos.",
     name: "Leiliana Freitas",
     area: "Direito do Consumidor",
   },
   {
     quote:
-      "Em um momento delicado para minha família, encontrei profissionais sérios e humanos, que conduziram tudo com discrição e respeito. Recomendo pela competência e, principalmente, pela forma humanizada de atender.",
+      "Em um momento delicado para minha família, encontrei profissionais sérios e humanos, que conduziram tudo com discrição e respeito.",
     name: "Nivaldo Rosa",
     area: "Direito Civil e Família",
   },
   {
     quote:
-      "Precisava de orientação sobre minha aposentadoria e não sabia por onde começar. Recebi uma explicação clara sobre cada etapa do processo e acompanhamento constante até a conclusão, com total transparência.",
+      "Precisava de orientação sobre minha aposentadoria e não sabia por onde começar. Recebi explicações claras em cada etapa e acompanhamento constante até a conclusão.",
     name: "Marlene Aparecida",
     area: "Direito Previdenciário",
   },
   {
     quote:
-      "Tive um voo cancelado sem nenhuma assistência da companhia aérea. O escritório conduziu todo o processo com agilidade e me manteve informado em cada fase, até a solução favorável do caso.",
+      "Tive um voo cancelado sem nenhuma assistência da companhia aérea. O escritório conduziu tudo com agilidade e me manteve informado até a solução favorável.",
     name: "Rodrigo Teixeira",
     area: "Direito do Passageiro Aéreo",
   },
